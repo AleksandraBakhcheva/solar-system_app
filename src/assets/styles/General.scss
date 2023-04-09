@@ -1,2 +1,11 @@
 /* normalize.css */
 @import url(https://necolas.github.io/normalize.css/latest/normalize.css);
+
+/* fonts */
+@font-face {
+  font-family: "Rock 3D Regular";
+  src: local("Rock 3D Regular"),
+    url("../fonts//Rock3D-Regular.woff") format("woff");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap");
