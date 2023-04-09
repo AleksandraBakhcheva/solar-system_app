@@ -1,2 +1,9 @@
 /* normalize.css */
 @import url(https://necolas.github.io/normalize.css/latest/normalize.css);
+
+/* fonts */
+@font-face {
+  font-family: "Rock 3D Regular";
+  src: local("Rock 3D Regular"),
+    url("../fonts//Rock3D-Regular.woff") format("woff");
+}
