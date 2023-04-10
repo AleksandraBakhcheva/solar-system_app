@@ -1,16 +1,17 @@
 .head-title-container {
     margin: 0 auto;
 }
+
 .head-title-container p{
-    font-family: 'Rock 3D Regular';
+    font-family: var(--title-font);
     font-style: normal;
     font-weight: 400;
     font-size: 78px;
     line-height: 113px;
     text-align: center;
     text-transform: uppercase;
+    color: var(--main-font-color);
 
-    color: #FFFFFF;
     @media screen and (max-width: 480px) {
         font-size: 33px;
         line-height: 48px;
