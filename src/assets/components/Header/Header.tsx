@@ -10,16 +10,18 @@ export default function Header() {
         <img className="header__logo" src={logo} alt="logo" />
       </Link>
       <img className="header__pic" src={sun} alt="sun" />
-      <nav className="header__menu">
-        <ul>
-          <li>
-            <Link to="">Data</Link>
-          </li>
-          <li>
-            <Link to="">Statistics</Link>
-          </li>
-        </ul>
-      </nav>
+      <div className="header__menu">
+        <nav>
+          <ul>
+            <li>
+              <Link to="">Data</Link>
+            </li>
+            <li>
+              <Link to="">Statistics</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   );
 }
