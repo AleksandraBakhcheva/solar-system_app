@@ -1,13 +1,13 @@
 import "./assets/styles/General.scss";
 import "./assets/styles/Variables.scss";
-import HeadTitle from "./assets/components/HeadTitle/HeadTitle";
+import Layout from "./assets/components/Layout/Layout";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <p>Hello World!</p>
-      <HeadTitle/>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}></Route>
+    </Routes>
   );
 }
 
