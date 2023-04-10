@@ -1,0 +1,18 @@
+.all-planets-container {
+  display: flex;
+  justify-content: center;
+}
+
+.all-planets-container a {
+  text-decoration: none;
+}
+
+.card {
+  list-style-type: none;
+  display: inline-flex;
+  gap: 10px;
+}
+
+.card_name {
+  color: var(--main-font-color);
+}

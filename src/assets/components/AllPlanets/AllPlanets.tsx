@@ -9,16 +9,16 @@ export default function AllPlanets(){
     const [planets, setPlanets] = useState<IPlanet[]>([])
 
     async function sendApiRequest(): Promise<IPlanet[]> {
-              //let response = await fetch(`https://api.le-systeme-solaire.net/rest/bodies/terre`)
-            return await fetch(`https://api.le-systeme-solaire.net/rest/bodies`)
-                .then(res => res.json())
-                .then(res => {
-                    const planetList: IPlanet[] = res.bodies;                    
-                    const needList: IPlanet[] = planetList.filter((planet) => needNames.includes(planet.englishName))
-                    console.log("needList", needList)                    
-                    setPlanets(needList)
-                    return needList
-                })
+        //let response = await fetch(`https://api.le-systeme-solaire.net/rest/bodies/terre`)
+        return await fetch(`https://api.le-systeme-solaire.net/rest/bodies`)
+            .then(res => res.json())
+            .then(res => {
+                const planetList: IPlanet[] = res.bodies;                    
+                const needList: IPlanet[] = planetList.filter((planet) => needNames.includes(planet.englishName))
+               // console.log("needList", needList)                    
+                setPlanets(needList.reverse())
+                return needList
+            })
     }
 
 
@@ -27,9 +27,15 @@ export default function AllPlanets(){
     }, [])
 
     return(
-        <div className='all-planets-container'>
-            {planets.map(planet => <PlanetCard planet={planet} key={planet.id}/>)}            
-        </div>
+        <ul className='all-planets-container'>
+            {planets.map(
+                planet => 
+                <PlanetCard
+                planet={planet}
+                key={planet.id}
+                />)
+            }                   
+        </ul>
     )
 
 }
