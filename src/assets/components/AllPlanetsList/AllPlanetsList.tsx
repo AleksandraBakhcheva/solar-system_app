@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./AllPlanets.scss";
+import "./AllPlanetsList.scss";
 import PlanetCard from "./PlanetCard";
 import { IPlanet } from "./interfaces";
 
@@ -27,15 +27,17 @@ export default function AllPlanets(){
     }, [])
 
     return(
-        <ul className='all-planets-container'>
+        <div className='all-planets-outer-container'>
+            <div className="all-planets-inner-container">
             {planets.map(
                 planet => 
                 <PlanetCard
                 planet={planet}
                 key={planet.id}
                 />)
-            }                   
-        </ul>
+            }
+            </div>                   
+        </div>
     )
 
 }
