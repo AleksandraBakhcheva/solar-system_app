@@ -1,1 +1,46 @@
+@import "../../styles/_Variables.scss";
+@import "../../styles/_Mixins.scss";
 
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    overflow: hidden;
+
+    .header__logo {
+      position: absolute;
+      top: 30px;
+      left: 15px;
+      z-index: 2;
+      background-color: transparent;
+    }
+
+    .header__pic {
+      transform: scale(1.005);
+      z-index: 1;
+    }
+
+    .header__menu {
+      display: none;
+    }
+  }
+}
+
+.header__menu {
+  li {
+    display: inline;
+    margin-right: 15%;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    @include mainFont;
+    text-decoration: none;
+  }
+}
