@@ -59,8 +59,8 @@
   }
 }
 
-.card:active, 
-.card:hover {
+.card:hover,
+.active {
   background-color: $main-font-color;
   
   .card__name{
