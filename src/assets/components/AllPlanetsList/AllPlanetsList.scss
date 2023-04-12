@@ -12,7 +12,7 @@
 .all-planets-inner-container{
   width: 100%;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   gap: 1%;
   overflow-x: scroll;
 	scroll-behavior: smooth;

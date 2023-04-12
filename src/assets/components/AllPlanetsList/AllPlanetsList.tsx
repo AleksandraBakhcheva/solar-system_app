@@ -7,18 +7,21 @@ const needNames:string[] = ['Mercury','Venus','Earth','Mars','Jupiter','Saturn',
 
 export default function AllPlanets(){
     const [planets, setPlanets] = useState<IPlanet[]>([])
+    const [loading, setLoading] = useState(false)
+    //const [error, setError] = useState('')
+
 
     async function sendApiRequest(): Promise<IPlanet[]> {
-        //let response = await fetch(`https://api.le-systeme-solaire.net/rest/bodies/terre`)
+        setLoading(true)
         return await fetch(`https://api.le-systeme-solaire.net/rest/bodies`)
-            .then(res => res.json())
-            .then(res => {
-                const planetList: IPlanet[] = res.bodies;                    
-                const needList: IPlanet[] = planetList.filter((planet) => needNames.includes(planet.englishName))
-               // console.log("needList", needList)                    
-                setPlanets(needList.reverse())
-                return needList
-            })
+        .then(res => res.json())
+        .then(res => {
+            const planetList: IPlanet[] = res.bodies;                    
+            const needList: IPlanet[] = planetList.filter((planet) => needNames.includes(planet.englishName))
+            setPlanets(needList)               
+            setLoading(false)
+            return needList
+        })       
     }
 
 
@@ -29,6 +32,7 @@ export default function AllPlanets(){
     return(
         <div className='all-planets-outer-container'>
             <div className="all-planets-inner-container">
+            {loading && <p className="loading-message">Loading...</p>}
             {planets.map(
                 planet => 
                 <PlanetCard
@@ -41,17 +45,3 @@ export default function AllPlanets(){
     )
 
 }
-/**
- *   <PlanetCard planet={planets[0]}/>
-                <PlanetCard planet={planets[1]}/>
- *  <div className='container'><h1 className='caption'>Flachcards</h1>
-            <div className='card-wrap'>             
-            {
-                data.map((word) =>
-                <Card key={word.id} english={word.english}
-                transcription={word.transcription}
-                russian={word.russian}/>
-            )}
-            </div>
-        </div>
- */

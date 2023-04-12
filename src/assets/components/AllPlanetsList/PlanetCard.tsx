@@ -27,11 +27,11 @@ const images:{[key: string]: any} = {
 }
 
 export default function PlanetCard({planet}:PlanetProps){
-
+    
     let imagePath:string = images[planet.englishName]
 
     return (
-        <div className="card">
+        <div className="card" >
             <NavLink to={`/${planet.englishName}`}>        
                 <img className="card__img" src={imagePath} alt={planet.englishName}/>
                 <div className="card__name">{planet.englishName}</div>
@@ -39,17 +39,3 @@ export default function PlanetCard({planet}:PlanetProps){
         </div>
     )
 }
-//<li className="card" > </li>
-//onClick={() => setItem(planet.id)}> <img src={planet.img} alt={planet.name}/>
-/**                 <li>
-                        <button className={className} onClick={handleClick}>Add new word</button>
-                        <Modal  ><NewWord /></Modal></li>                    
-                    <li>
-                        <NavLink to="/">Home</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/flachcards">Flachcards</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/game">Game</NavLink>
-                    </li> */
