@@ -32,14 +32,6 @@
   }
 }
 
-.header__menu {
-  display: flex;
-  align-items: center;
-  font-size: 22px;
-  line-height: 28px;
-  gap: 30px;
-}
-
 .header-mobile__button {
   display: none;
 }
@@ -48,17 +40,13 @@
   .header {
     overflow: hidden;
   }
+
   .header__logo {
     position: absolute;
     top: 30px;
     left: 15px;
     z-index: 2;
     background-color: transparent;
-  }
-
-  .header__pic {
-    transform: scale(1.005);
-    z-index: 1;
   }
 
   .header-mobile__button {
@@ -69,7 +57,6 @@
     cursor: pointer;
     z-index: 10;
     color: $main-font-color;
-    background-color: transparent;
   }
 
   .header__menu {
@@ -78,6 +65,7 @@
     height: 100vh;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     position: fixed;
     left: -100%;
     right: 0;
@@ -85,7 +73,16 @@
     bottom: 0;
     z-index: 10;
     transition: left 1s;
+    gap: 30px;
     background-color: $app-general-background;
+    background-image: url(../../images/astronaut.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 20vmax;
+  }
+
+  .header__menu li:last-child {
+    margin-bottom: 80%;
   }
 
   .header__menu_active {

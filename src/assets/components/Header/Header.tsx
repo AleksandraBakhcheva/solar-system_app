@@ -2,7 +2,8 @@ import "./Header.scss";
 import logo from "../../images/logo.svg";
 import sun from "../../images/sun.svg";
 import { Link } from "react-router-dom";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { ImCross } from "react-icons/im";
 import { useState } from "react";
 
 export default function Header() {
@@ -16,7 +17,7 @@ export default function Header() {
             <Link to="/">
               <img className="header__logo" src={logo} alt="logo" />
             </Link>
-            <img className="header__pic" src={sun} alt="sun" />
+            <img src={sun} alt="sun" />
           </div>
           <ul
             className={
@@ -38,9 +39,9 @@ export default function Header() {
               className="header-mobile__button"
             >
               {navigation ? (
-                <AiOutlineClose size={30} />
+                <ImCross size={30} />
               ) : (
-                <AiOutlineMenu size={30} />
+                <GiHamburgerMenu size={40} />
               )}
             </div>
           }
