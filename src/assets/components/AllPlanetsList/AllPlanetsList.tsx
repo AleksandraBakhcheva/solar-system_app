@@ -10,7 +10,6 @@ export default function AllPlanets(){
     const [loading, setLoading] = useState(false)
     //const [error, setError] = useState('')
 
-
     async function sendApiRequest(): Promise<IPlanet[]> {
         setLoading(true)
         return await fetch(`https://api.le-systeme-solaire.net/rest/bodies`)
@@ -23,7 +22,6 @@ export default function AllPlanets(){
             return needList
         })       
     }
-
 
     useEffect(() => {
         sendApiRequest()

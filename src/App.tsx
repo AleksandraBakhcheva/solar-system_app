@@ -9,7 +9,7 @@ import PlanetInfo from "./assets/components/PlanetInfo/PlanetInfo";
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
       <main>
         <HeadTitle/>
@@ -21,7 +21,7 @@ function App() {
         </Routes>
       </main>
         <Footer />
-    </div>
+    </>
   );
 }
 
