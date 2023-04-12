@@ -1,0 +1,8 @@
+@import "../../styles/_Variables.scss";
+@import "../../styles/_Mixins.scss";
+
+.planet-container{
+    margin: 0 auto;
+    @include titleFont;
+  text-align: center;
+}
