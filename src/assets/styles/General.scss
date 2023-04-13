@@ -13,5 +13,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap");
 
 * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   background-color: $app-general-background;
+  background-image: url(../images/stars.svg);
 }
