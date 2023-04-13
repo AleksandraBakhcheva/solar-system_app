@@ -1,0 +1,13 @@
+@import "../../styles/_Variables.scss";
+@import "../../styles/_Mixins.scss";
+
+.error_wrap {
+  text-align: center;
+  /* padding-top: 20vh;*/
+  overflow: hidden;
+}
+
+.error_wrap h1,
+p {
+  @include mainFont;
+}
