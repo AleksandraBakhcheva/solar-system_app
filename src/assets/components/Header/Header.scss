@@ -27,6 +27,10 @@
     margin-left: -20%;
   }
 
+  &-mobile__button {
+    display: none;
+  }
+
   &__box {
     display: flex;
     align-items: center;
@@ -40,10 +44,6 @@
       text-decoration: none;
     }
   }
-}
-
-.header-mobile__button {
-  display: none;
 }
 
 @media screen and (max-width: 768px) {
