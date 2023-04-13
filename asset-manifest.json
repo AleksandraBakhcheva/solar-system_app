@@ -1,12 +1,27 @@
 {
   "files": {
-    "main.css": "/solar-system_app/static/css/main.42ccc8b6.css",
-    "main.js": "/solar-system_app/static/js/main.45d6ad59.js",
+    "main.css": "/solar-system_app/static/css/main.08da27f4.css",
+    "main.js": "/solar-system_app/static/js/main.af32d409.js",
+    "static/media/Rock3D-Regular.woff": "/solar-system_app/static/media/Rock3D-Regular.e094e13f7a2077330738.woff",
+    "static/media/sun.svg": "/solar-system_app/static/media/sun.2c0a7cf035d39ab686a6f3b3d62e0832.svg",
+    "static/media/stars.svg": "/solar-system_app/static/media/stars.373a47c923a608acea5c.svg",
+    "static/media/jupiter.svg": "/solar-system_app/static/media/jupiter.40dd274508df89e8fb6a341de30e8cca.svg",
+    "static/media/earth.svg": "/solar-system_app/static/media/earth.c5b4dc9560c58c822e83fda9b05a092d.svg",
+    "static/media/saturn.svg": "/solar-system_app/static/media/saturn.3a7e005bd3fcef30a2f28f6c042c2ddc.svg",
+    "static/media/venus.svg": "/solar-system_app/static/media/venus.a6253b1123ca495246178ae1a3a327c7.svg",
+    "static/media/uranus.svg": "/solar-system_app/static/media/uranus.d78263632f1c16d45a4ff486b2717b3c.svg",
+    "static/media/mars.svg": "/solar-system_app/static/media/mars.5fdaa6a376fe5dc183f5664ca0599086.svg",
+    "static/media/neptune.svg": "/solar-system_app/static/media/neptune.fc9ef18de6850311a58ec55cf6c8107c.svg",
+    "static/media/pluto.svg": "/solar-system_app/static/media/pluto.8987b162ebc925704f841e9a46b23534.svg",
+    "static/media/mercury.svg": "/solar-system_app/static/media/mercury.83b71680a75bda1e49585a9b2fb62cda.svg",
+    "static/media/logo.svg": "/solar-system_app/static/media/logo.72d3caa2605ae3e4d6eb022f031b3761.svg",
+    "static/media/rocket.svg": "/solar-system_app/static/media/rocket.72273813622751a21a79.svg",
     "index.html": "/solar-system_app/index.html",
-    "main.45d6ad59.js.map": "/solar-system_app/static/js/main.45d6ad59.js.map"
+    "main.08da27f4.css.map": "/solar-system_app/static/css/main.08da27f4.css.map",
+    "main.af32d409.js.map": "/solar-system_app/static/js/main.af32d409.js.map"
   },
   "entrypoints": [
-    "static/css/main.42ccc8b6.css",
-    "static/js/main.45d6ad59.js"
+    "static/css/main.08da27f4.css",
+    "static/js/main.af32d409.js"
   ]
 }
