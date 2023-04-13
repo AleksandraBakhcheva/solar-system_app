@@ -2,23 +2,33 @@
 @import "../../styles/_Mixins.scss";
 
 .header {
-  margin-bottom: 3rem;
+  margin-bottom: $block-margin-bottom;
 
-  .header__container {
+  &__container {
     display: flex;
-    padding: 0 10px;
     justify-content: space-evenly;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__menu li {
+    margin-left: 15%;
+  }
+
+  &__images {
+    display: flex;
     align-items: center;
   }
 
-  .header__images {
-    display: flex;
-    align-items: center;
+  &__logo {
+    margin-left: -20%;
   }
 
-  .header__box {
+  &__box {
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
 
     ul {
@@ -39,53 +49,62 @@
 @media screen and (max-width: 768px) {
   .header {
     overflow: hidden;
-  }
 
-  .header__logo {
-    position: absolute;
-    top: 30px;
-    left: 15px;
-    z-index: 2;
-    background-color: transparent;
-  }
+    &__logo {
+      position: absolute;
+      top: 30px;
+      left: 15px;
+      margin: 0;
+      z-index: 2;
+      background-color: transparent;
+    }
 
-  .header-mobile__button {
-    display: block;
-    position: absolute;
-    right: 10px;
-    top: 27px;
-    cursor: pointer;
-    z-index: 10;
-    color: $main-font-color;
-  }
+    &-mobile__button {
+      display: block;
+      position: absolute;
+      right: 10px;
+      top: 27px;
+      cursor: pointer;
+      z-index: 10;
+      color: $main-font-color;
+      background-color: transparent;
+    }
 
-  .header__menu {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    left: -100%;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 10;
-    transition: left 1s;
-    gap: 30px;
-    background-color: $app-general-background;
-    background-image: url(../../images/astronaut.svg);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 20vmax;
-  }
+    &-mobile__button svg {
+      background-color: transparent;
+    }
 
-  .header__menu li:last-child {
-    margin-bottom: 80%;
-  }
+    &__menu {
+      width: 100%;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      left: -100%;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 10;
+      transition: left 1s;
+      gap: 30px;
+      background-color: $app-general-background;
+      background-image: url(../../images/rocket.svg);
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: 70vmax;
+    }
 
-  .header__menu_active {
-    left: 0;
+    &__menu li {
+      margin: 0;
+    }
+
+    &__menu li:last-child {
+      margin-bottom: 80%;
+    }
+
+    &__menu_active {
+      left: 0;
+    }
   }
 }

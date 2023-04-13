@@ -27,7 +27,7 @@ export default function Header() {
             }
           >
             <li>
-              <Link to="">Data</Link>
+              <Link to="">Planets</Link>
             </li>
             <li>
               <Link to="">Statistics</Link>
