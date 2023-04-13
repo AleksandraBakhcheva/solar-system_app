@@ -2,7 +2,7 @@ import "./AllPlanetsList.scss";
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { IPlanet } from "./Interfaces";
-import { PlanetsContext } from "../../Context/PlanetsContext";
+import { PlanetsContext } from "../../сontext/PlanetsContext";
 
 interface PlanetProps{
     planet: IPlanet

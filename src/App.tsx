@@ -6,7 +6,7 @@ import "./assets/styles/General.scss";
 import Layout from "./assets/components/Layout/Layout";
 import { Routes, Route } from "react-router-dom";
 import PlanetInfo from "./assets/components/PlanetInfo/PlanetInfo";
-import { PlanetsContextProvider } from "./assets/Context/PlanetsContext";
+import { PlanetsContextProvider } from "./assets/сontext/PlanetsContext";
 
 function App() {
   return (
