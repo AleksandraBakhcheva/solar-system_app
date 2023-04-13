@@ -89,9 +89,10 @@
       transition: left 1s;
       gap: 30px;
       background-color: $app-general-background;
-      background-image: url(../../images/rocket.svg);
-      background-repeat: no-repeat;
-      background-position: bottom;
+      background-image: url(../../images/rocket.svg),
+        url(../../images/stars.svg);
+      background-repeat: no-repeat, repeat-y;
+      background-position: bottom, center;
       background-size: 70vmax;
     }
 
