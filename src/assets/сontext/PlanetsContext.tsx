@@ -9,6 +9,7 @@ import Pluto from '../images/pluto.svg';
 import Saturn from '../images/saturn.svg';
 import Uranus from '../images/uranus.svg';
 import Venus from '../images/venus.svg';
+import Error from '../components/Error/Error';
 
 interface IPlanetContext {
   setPlanets: any
@@ -54,9 +55,9 @@ export const PlanetsContextProvider = ({ children }: { children: React.ReactNode
 
   const [planets, setPlanets] = useState<IPlanet[]>([])
   const [loading, setLoading] = useState(false)
-  //const [error, setError] = useState('')
+  const [error, setError] = useState('')
 
-  async function sendApiRequest(): Promise<IPlanet[]> {
+  async function sendApiRequest(): Promise<void | IPlanet[]> {
     setLoading(true);
     return await fetch(`https://api.le-systeme-solaire.net/rest/bodies`)
       .then((res) => res.json())
@@ -68,7 +69,8 @@ export const PlanetsContextProvider = ({ children }: { children: React.ReactNode
         setPlanets(needList);
         setLoading(false);
         return needList;
-      });      
+      })
+      .catch((error) => setError(error));
     }
 
   useEffect(() => {
@@ -77,10 +79,10 @@ export const PlanetsContextProvider = ({ children }: { children: React.ReactNode
   
   const values = { loading, setPlanets, planets, sendApiRequest, images };
 
-//if (isLoading) return <Loading/>
-//if (error) return <Error/>
+//if (loading) return <Loading/>
+if (error) return <Error/>
 
-//if(!data){
+//if(!res){
 //    return;
 //}
   
