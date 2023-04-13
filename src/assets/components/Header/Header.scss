@@ -46,7 +46,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 920px) {
   .header {
     overflow: hidden;
 
@@ -91,9 +91,14 @@
       background-color: $app-general-background;
       background-image: url(../../images/rocket.svg),
         url(../../images/stars.svg);
-      background-repeat: no-repeat, repeat-y;
+      background-repeat: no-repeat, repeat;
       background-position: bottom, center;
       background-size: 70vmax;
+
+      @media (orientation: landscape) {
+        background-image: url(../../images/stars.svg);
+        background-repeat: repeat;
+      }
     }
 
     &__menu li {
@@ -102,6 +107,10 @@
 
     &__menu li:last-child {
       margin-bottom: 80%;
+
+      @media (orientation: landscape) {
+        margin-bottom: 0;
+      }
     }
 
     &__menu_active {
