@@ -45,6 +45,9 @@
     align-items: center;
     justify-content: space-around;
   }
+  a:focus {
+    outline: none;
+  }
 
   img {
     width: 42px;
@@ -79,6 +82,3 @@
     animation: planet 4s linear 0s infinite;
   }
 }
-/*.card:focus {
-  justify-content: center;
-}*/
