@@ -3,7 +3,6 @@ import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { IPlanet, PlanetProps } from "./Interfaces";
 import { PlanetsContext } from "../../сontext/PlanetsContext";
-//import PlanetInfo from "../PlanetInfo/PlanetInfo";
 
 export default function PlanetCard({planet}:PlanetProps){
     
@@ -11,7 +10,7 @@ export default function PlanetCard({planet}:PlanetProps){
     let imagePath:string = images[planet.englishName]
 
   return (
-    <div className="card">
+    <div className="card" id={planet.englishName}>
       <NavLink to={`/${planet.englishName}`}>
         <img className="card__img" src={imagePath} alt="planet" />
         <div className="card__name">{planet.englishName}</div>
