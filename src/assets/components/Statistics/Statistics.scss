@@ -1,0 +1,122 @@
+@import "../../styles/_Variables.scss";
+@import "../../styles/_Mixins.scss";
+
+.statistics__container {
+  max-width: 1384px;
+  margin: 0 auto;
+
+  &__box {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: flex-end;
+    @include titleFont;
+    margin-bottom: $block-margin-bottom;
+
+    @media screen and (max-width: 480px) {
+      font-size: 33px;
+      line-height: 48px;
+      justify-content: center;
+      margin-bottom: 5rem;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 800px) {
+      font-size: 60px;
+      justify-content: center;
+    }
+  }
+
+  &__thought {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    img:first-of-type {
+      z-index: 1;
+      background-color: transparent;
+
+      @media screen and (max-width: 480px) {
+        width: 260px;
+        height: 260px;
+      }
+    }
+
+    img:last-child {
+      width: 197px;
+      height: 475px;
+      margin-left: 230px;
+      margin-top: -28px;
+
+      @media screen and (max-width: 480px) {
+        width: 153px;
+        height: 370px;
+        margin-left: 180px;
+      }
+    }
+
+    p {
+      margin-bottom: -200px;
+      margin-left: 40px;
+      text-align: center;
+      @include mainFont;
+      font-weight: 600;
+      line-height: 35px;
+      z-index: 2;
+      background-color: transparent;
+
+      @media screen and (max-width: 480px) {
+        margin-bottom: -144px;
+        font-size: 16px;
+        line-height: 25px;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    height: 32%;
+    justify-content: center;
+    align-items: flex-end;
+
+    select,
+    button {
+      width: 410px;
+      height: 65px;
+      @include statBorder;
+      @include mainFont;
+      background-color: transparent;
+    }
+
+    select {
+      margin-right: 25px;
+      padding-left: 20px;
+      font-weight: 600;
+      line-height: 35px;
+      outline: none;
+      appearance: none;
+      background-image: url(../../images/arrow.svg);
+      background-repeat: no-repeat;
+      background-position: calc(100% - 25px) center;
+    }
+
+    button {
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 42px;
+      cursor: pointer;
+    }
+
+    select:hover,
+    button:hover {
+      color: $app-general-background;
+      background-color: $main-font-color;
+    }
+  }
+}
