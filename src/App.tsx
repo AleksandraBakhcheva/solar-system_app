@@ -6,7 +6,7 @@ import AllPlanets from "./assets/components/AllPlanetsList/AllPlanetsList";
 import Layout from "./assets/components/Layout/Layout";
 import Statistics from "./assets/components/Statistics/Statistics";
 import PlanetInfo from "./assets/components/PlanetInfo/PlanetInfo";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { PlanetsContextProvider } from "./assets/сontext/PlanetsContext";
 
 function App() {
