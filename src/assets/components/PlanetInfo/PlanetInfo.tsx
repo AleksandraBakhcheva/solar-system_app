@@ -10,19 +10,13 @@ export default function PlanetInfo(){
     const { images, planets } = useContext(PlanetsContext)
     
     const planet = planets.find((item: { englishName: string; }) => item.englishName === current);
-    
-    const planetImg = Object.keys(images).find((key) => images[key] = params.id);
-    console.log(planetImg)
-    
-    if (planetImg) {
-        let imagePath: string = images[planetImg]
-    }
+    let imagePath: string = images[current!]
 
     return (
         <div>
             {planet ? (<div className="planet-container">
                 <div className="planet-container__name">{ planet.englishName}</div>
-                <img className="planet-container__img" src='' alt="planet" />
+                <img className="planet-container__img" src={imagePath} alt={ planet.englishName} />
             </div>) : (
                 <div>Object not found</div>
             )}
