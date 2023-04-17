@@ -16,3 +16,8 @@
   text-transform: uppercase;
   color: $main-font-color;
 }
+
+@mixin statBorder {
+  border: 4px solid $statistics-border-color;
+  border-radius: 20px;
+}
