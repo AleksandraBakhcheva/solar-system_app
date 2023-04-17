@@ -1,8 +1,76 @@
 @import "../../styles/_Variables.scss";
 @import "../../styles/_Mixins.scss";
 
-.planet-container{
-    margin: 0 auto;
+.planet-container {
+  margin: 0 auto;
+  max-width: 1384px;
+  height: 500px;
+  display: grid;
+  gap: 5%;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 100px;
+
+  @media screen and (max-width: 1279px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+    height: fit-content;
+  }
+
+  &__name {
+    display: flex;
+    align-items: flex-end;
     @include titleFont;
+    text-transform: none;
+    font-size: 144px;
+    line-height: 209px;
+
+    @media screen and (max-width: 1279px) {
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media screen and (min-width: 781px) and (max-width: 1024px) {
+      font-size: 120px;
+    }
+    @media screen and (min-width: 541px) and (max-width: 780px) {
+      font-size: 90px;
+    }
+
+    @media screen and (max-width: 540px) {
+      font-size: 78px;
+      line-height: 150px;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 56px;
+      line-height: 81px;
+    }
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 396px;
+      @media screen and (max-width: 480px) {
+        width: 180px;
+      }
+
+      background-color: transparent;
+      // @keyframes planet {
+      //   from {
+      //     transform: rotate(0deg);
+      //   }
+      //   to {
+      //     transform: rotate(360deg);
+      //   }
+      // }
+      // animation: planet 10s linear 0s infinite;
+    }
+  }
+}
+.not_found__message {
+  @include mainFont;
   text-align: center;
 }

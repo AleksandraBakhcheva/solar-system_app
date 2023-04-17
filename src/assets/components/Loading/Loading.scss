@@ -1,0 +1,9 @@
+@import "../../styles/_Variables.scss";
+@import "../../styles/_Mixins.scss";
+
+.loading_wrap h1,
+p {
+  text-align: center;
+  overflow: hidden;
+  @include mainFont;
+}
