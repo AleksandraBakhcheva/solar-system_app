@@ -51,7 +51,7 @@ export const PlanetsContextProvider = ({ children }: { children: React.ReactNode
     'Uranus',
     'Neptune',
     'Pluto'
-  ];
+  ];  
 
   const [planets, setPlanets] = useState<IPlanet[]>([])
   const [loading, setLoading] = useState(false)
