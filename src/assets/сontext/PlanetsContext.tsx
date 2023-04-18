@@ -1,15 +1,25 @@
 import { createContext, useEffect, useState } from "react";
 import { IPlanet } from "../components/AllPlanetsList/Interfaces";
-import Earth from "../images/earth.svg";
-import Jupiter from "../images/jupiter.svg";
-import Mars from "../images/mars.svg";
-import Mercury from "../images/mercury.svg";
-import Neptune from "../images/neptune.svg";
-import Pluto from "../images/pluto.svg";
-import Saturn from "../images/saturn.svg";
-import Uranus from "../images/uranus.svg";
-import Venus from "../images/venus.svg";
+import Earth from "../images/real-png/earth.png";
+import Jupiter from "../images/real-png/jupiter.png";
+import Mars from "../images/real-png/mars.png";
+import Mercury from "../images/real-png/mercury.png";
+import Neptune from "../images/real-png/neptune.png";
+import Pluto from "../images/real-png/pluto.png";
+import Saturn from "../images/real-png/saturn.png";
+import Uranus from "../images/real-png/uranus.png";
+import Venus from "../images/real-png/venus.png";
 import Error from "../components/Error/Error";
+
+// import Earth from "../images/cartoon-png/earth.png";
+// import Jupiter from "../images/cartoon-png/jupiter.png";
+// import Mars from "../images/cartoon-png/mars.png";
+// import Mercury from "../images/cartoon-png/mercury.png";
+// import Neptune from "../images/cartoon-png/neptune.png";
+// import Pluto from "../images/cartoon-png/pluto.png";
+// import Saturn from "../images/cartoon-png/saturn.png";
+// import Uranus from "../images/cartoon-png/uranus.png";
+// import Venus from "../images/cartoon-png/venus.png";
 
 interface IPlanetContext {
   setPlanets: any;
