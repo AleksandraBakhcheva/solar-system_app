@@ -2,6 +2,7 @@ import "./PlanetInfo.scss";
 import { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import { PlanetsContext } from "../../сontext/PlanetsContext";
+import PlanetTable from "./PlanetTable";
 
 export default function PlanetInfo() {
   const params = useParams();
@@ -18,11 +19,14 @@ export default function PlanetInfo() {
   }
 
   return (
-    <div className="planet-container">
-      <div className="planet-container__name">{planet.englishName}</div>
-      <div className="planet-container__img">
-        <img src={imagePath} alt="planet" />
+    <div className="planet-container_wrap">
+      <div className="planet-container">
+        <div className="planet-container__name">{planet.englishName}</div>
+        <div className="planet-container__img">
+          <img src={imagePath} alt="planet" />
+        </div>
       </div>
+      <PlanetTable planet={planet} />
     </div>
   );
 }

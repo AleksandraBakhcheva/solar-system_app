@@ -2,7 +2,7 @@ export interface IPlanet {
   alternativeName?: string;
   aphelion?: number;
   argPeriapsis?: number;
-  aroundPlanet?: {};
+  aroundPlanet?: object;
   avgTemp?: number;
   axialTilt?: number;
   bodyType?: string;

@@ -1,9 +1,18 @@
 @import "../../styles/_Variables.scss";
 @import "../../styles/_Mixins.scss";
 
-.planet-container {
+.not_found__message {
+  @include mainFont;
+  text-align: center;
+}
+
+.planet-container_wrap {
+  @include mainFont;
   margin: 0 auto;
   max-width: 1384px;
+}
+
+.planet-container {
   height: 500px;
   display: grid;
   gap: 5%;
@@ -58,19 +67,15 @@
       }
 
       background-color: transparent;
-      // @keyframes planet {
-      //   from {
-      //     transform: rotate(0deg);
-      //   }
-      //   to {
-      //     transform: rotate(360deg);
-      //   }
-      // }
-      // animation: planet 10s linear 0s infinite;
+      @keyframes planet {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      animation: planet 10s linear 0s infinite;
     }
   }
-}
-.not_found__message {
-  @include mainFont;
-  text-align: center;
 }
