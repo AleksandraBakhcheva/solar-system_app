@@ -1,9 +1,9 @@
 @import "../../styles/_Variables.scss";
 @import "../../styles/_Mixins.scss";
 
-.error_wrap {
-  @include mainFont;
+.loading_wrap h1,
+p {
   text-align: center;
   overflow: hidden;
-  padding-top: 20vh;
+  @include mainFont;
 }

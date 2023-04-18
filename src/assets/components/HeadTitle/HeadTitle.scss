@@ -10,7 +10,7 @@
   @include titleFont;
   text-align: center;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 540px) {
     font-size: 33px;
     line-height: 48px;
   }

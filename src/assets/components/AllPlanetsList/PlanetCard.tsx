@@ -1,22 +1,25 @@
 import "./AllPlanetsList.scss";
-import { useContext } from "react";
-import { NavLink } from "react-router-dom";
-import { IPlanet } from "./Interfaces";
+import { useContext, useEffect, useRef } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import { PlanetProps } from "./Interfaces";
 import { PlanetsContext } from "../../сontext/PlanetsContext";
 
-interface PlanetProps {
-  planet: IPlanet;
-}
+export default function PlanetCard({ planet }: PlanetProps) {
+  const { images } = useContext(PlanetsContext);
+  let imagePath: string = images[planet.englishName];
+  const cardRef = useRef<HTMLAnchorElement>(null);
+  let location = useLocation();
 
-export default function PlanetCard({planet}:PlanetProps){
-    
-    const { images } = useContext(PlanetsContext)
-    let imagePath:string = images[planet.englishName]
+  useEffect(() => {
+    if (cardRef.current?.className.includes("active")) {
+      cardRef.current?.focus();
+    }
+  }, [location.pathname]);
 
   return (
-    <div className="card">
-      <NavLink to={`/${planet.englishName}`}>
-        <img className="card__img" src={imagePath} alt={planet.englishName} />
+    <div className="card" id={planet.englishName}>
+      <NavLink to={`/${planet.englishName}`} ref={cardRef}>
+        <img className="card__img" src={imagePath} alt="planet" />
         <div className="card__name">{planet.englishName}</div>
       </NavLink>
     </div>
