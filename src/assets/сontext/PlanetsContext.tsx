@@ -10,7 +10,6 @@ import Saturn from "../images/saturn.svg";
 import Uranus from "../images/uranus.svg";
 import Venus from "../images/venus.svg";
 import Error from "../components/Error/Error";
-import Loading from "../components/Loading/Loading";
 
 interface IPlanetContext {
   setPlanets: any;
@@ -83,7 +82,6 @@ export const PlanetsContextProvider = ({
 
   const values = { loading, setPlanets, planets, sendApiRequest, images };
 
-  if (loading) return <Loading />;
   if (error) return <Error />;
 
   return (

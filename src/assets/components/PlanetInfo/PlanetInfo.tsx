@@ -1,21 +1,26 @@
 import "./PlanetInfo.scss";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { PlanetsContext } from "../../сontext/PlanetsContext";
 import PlanetTable from "./PlanetTable";
+import Loading from "../Loading/Loading";
+import Planet404 from "./Planet404";
 
 export default function PlanetInfo() {
   const params = useParams();
   const current = params.id;
-  const { images, planets } = useContext(PlanetsContext);
+  const { images, planets, loading } = useContext(PlanetsContext);
 
   const planet = planets.find(
     (item: { englishName: string }) => item.englishName === current
   );
   let imagePath: string = images[current!];
 
-  if (!planet) {
-    return <div className="not_found__message">Object not found</div>;
+  if (!planet && loading) {
+    return <Loading />;
+  }
+  if (!planet && !loading) {
+    return <Planet404 />;
   }
 
   return (
