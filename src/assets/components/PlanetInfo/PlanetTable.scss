@@ -21,6 +21,10 @@
     border: 4px solid #fffbfb;
     border-radius: 20px;
     padding: 42px;
+
+    @media screen and (max-width: 1279px) {
+      padding: 25px;
+    }
   }
 }
 .table__title {
