@@ -1,5 +1,5 @@
 import "./PlanetTable.scss";
-import { PlanetProps } from "../AllPlanetsList/Interfaces";
+import { PlanetProps } from "../../utils/Interfaces";
 
 export default function PlanetTable({ planet }: PlanetProps) {
   return (
@@ -82,11 +82,11 @@ export default function PlanetTable({ planet }: PlanetProps) {
             <div className="table__value">{planet.perihelion}</div>
           </div>
           <div className="table__row">
-            <div className="table__item">sideralOrbit</div>
+            <div className="table__item">sideral orbit</div>
             <div className="table__value">{planet.sideralOrbit}</div>
           </div>
           <div className="table__row">
-            <div className="table__item">sideralRotation</div>
+            <div className="table__item">sideral rotation</div>
             <div className="table__value">{planet.sideralRotation}</div>
           </div>
           <div className="table__row">
@@ -96,10 +96,6 @@ export default function PlanetTable({ planet }: PlanetProps) {
           <div className="table__row">
             <div className="table__item">eccentricity</div>
             <div className="table__value">{planet.eccentricity}</div>
-          </div>
-          <div className="table__row">
-            <div className="table__item">avgTemp</div>
-            <div className="table__value">{planet.avgTemp}</div>
           </div>
         </div>
       </div>

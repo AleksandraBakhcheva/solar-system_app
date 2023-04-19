@@ -1,26 +1,19 @@
-import { createContext, useEffect, useState } from "react";
-import { IPlanet } from "../components/AllPlanetsList/Interfaces";
-import Earth from "../images/earth.svg";
-import Jupiter from "../images/jupiter.svg";
-import Mars from "../images/mars.svg";
-import Mercury from "../images/mercury.svg";
-import Neptune from "../images/neptune.svg";
-import Pluto from "../images/pluto.svg";
-import Saturn from "../images/saturn.svg";
-import Uranus from "../images/uranus.svg";
-import Venus from "../images/venus.svg";
+import { SetStateAction, createContext, useEffect, useState } from "react";
+import { IPlanet } from "../utils/Interfaces";
+import { images } from "../utils/images";
+import { needNames } from "../utils/needNames";
 import Error from "../components/Error/Error";
 
 interface IPlanetContext {
-  setPlanets: any;
+  setPlanets: (value: SetStateAction<IPlanet[]>) => void;
   planets: any;
   loading: boolean;
-  images: any;
+  images: { [key: string]: any };
   sendApiRequest: () => void;
 }
 
 export const PlanetsContext = createContext<IPlanetContext>({
-  setPlanets: [],
+  setPlanets: () => {},
   planets: [],
   loading: false,
   images: {},
@@ -32,30 +25,6 @@ export const PlanetsContextProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const images: { [key: string]: any } = {
-    Mercury: Mercury,
-    Venus: Venus,
-    Earth: Earth,
-    Mars: Mars,
-    Jupiter: Jupiter,
-    Saturn: Saturn,
-    Uranus: Uranus,
-    Neptune: Neptune,
-    Pluto: Pluto,
-  };
-
-  const needNames: string[] = [
-    "Mercury",
-    "Venus",
-    "Earth",
-    "Mars",
-    "Jupiter",
-    "Saturn",
-    "Uranus",
-    "Neptune",
-    "Pluto",
-  ];
-
   const [planets, setPlanets] = useState<IPlanet[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
