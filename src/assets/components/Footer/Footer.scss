@@ -1,0 +1,25 @@
+@import "../../styles/_Variables.scss";
+@import "../../styles/_Mixins.scss";
+
+.footer {
+  @include mainFont;
+  margin: 0 auto;
+  text-transform: uppercase;
+  @media screen and (max-width: 480px) {
+    font-size: 12px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 3rem;
+    align-items: center;
+
+    &_link {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+}
