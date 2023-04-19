@@ -1,5 +1,5 @@
 import "./PlanetTable.scss";
-import { PlanetProps } from "../AllPlanetsList/Interfaces";
+import { PlanetProps } from "../../utils/Interfaces";
 
 export default function PlanetTable({ planet }: PlanetProps) {
   return (
