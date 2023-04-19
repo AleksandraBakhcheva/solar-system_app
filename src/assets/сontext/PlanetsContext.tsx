@@ -1,19 +1,19 @@
-import { createContext, useEffect, useState } from "react";
+import { SetStateAction, createContext, useEffect, useState } from "react";
 import { IPlanet } from "../utils/Interfaces";
 import { images } from "../utils/images";
 import { needNames } from "../utils/needNames";
 import Error from "../components/Error/Error";
 
 interface IPlanetContext {
-  setPlanets: any;
+  setPlanets: (value: SetStateAction<IPlanet[]>) => void;
   planets: any;
   loading: boolean;
-  images: any;
+  images: { [key: string]: any };
   sendApiRequest: () => void;
 }
 
 export const PlanetsContext = createContext<IPlanetContext>({
-  setPlanets: [],
+  setPlanets: () => {},
   planets: [],
   loading: false,
   images: {},
