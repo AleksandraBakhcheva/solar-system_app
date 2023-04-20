@@ -1,7 +1,7 @@
 import "./AllPlanetsList.scss";
 import { useContext, useEffect, useRef } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { PlanetProps } from "./Interfaces";
+import { PlanetProps } from "../../utils/Interfaces";
 import { PlanetsContext } from "../../сontext/PlanetsContext";
 
 export default function PlanetCard({ planet }: PlanetProps) {
