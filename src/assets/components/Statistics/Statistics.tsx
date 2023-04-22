@@ -1,6 +1,7 @@
 import "./Statistics.scss";
 import { useContext, useState } from "react";
 import { PlanetsContext } from "../../сontext/PlanetsContext";
+import { statisticsCategories } from "../../utils/StatisticsCategories";
 import thought from "../../images/thought.svg";
 import astronaut from "../../images/astronaut.svg";
 import { motion } from "framer-motion";
@@ -29,19 +30,6 @@ export default function Statistics() {
 
   const { planets } = useContext(PlanetsContext);
   const [selectIndex, setSelectIndex] = useState<any>("");
-
-  const statisticsCategories: string[] = [
-    "Density",
-    "Gravity",
-    "Mass",
-    "Volume",
-    "Escape",
-    "Average Temperature",
-    "Mean Radius",
-    "Polar Radius",
-    "Sideral Orbit",
-    "Eccentricity",
-  ];
 
   const planetsStatistics: number[] = [];
   const labels = planets.map((a: any) => a.englishName);
@@ -72,13 +60,7 @@ export default function Statistics() {
   const options = {
     maintainAspectRatio: false,
     responsive: true,
-    chartArea: {
-      backgroundColor: "rgba(251, 85, 85, 0.4)",
-    },
     plugins: {
-      customCanvasBackgroundColor: {
-        color: "lightGreen",
-      },
       legend: {
         position: "top" as const,
       },
@@ -91,6 +73,7 @@ export default function Statistics() {
       {
         label: "",
         data: 0,
+        pointRadius: 0,
         borderColor: "",
         backgroundColor: "",
       },
@@ -105,6 +88,7 @@ export default function Statistics() {
           {
             label: statisticsCategories[selectIndex],
             data: planetsStatistics[selectIndex],
+            pointRadius: 8,
             borderColor: "rgb(255, 99, 132)",
             backgroundColor: "rgba(255, 99, 132, 0.5)",
           },

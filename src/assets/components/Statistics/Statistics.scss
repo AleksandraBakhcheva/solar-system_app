@@ -167,6 +167,10 @@
     width: 95%;
     height: 55vh;
     margin: 2rem auto;
-    background-color: transparent;
+
+    canvas {
+      background-image: none;
+      background-color: $main-font-color;
+    }
   }
 }
