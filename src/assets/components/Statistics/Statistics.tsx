@@ -98,17 +98,19 @@ export default function Statistics() {
   });
 
   const selectHandler = () => {
-    setData({
-      labels,
-      datasets: [
-        {
-          label: statisticsCategories[selectIndex],
-          data: planetsStatistics[selectIndex],
-          borderColor: "rgb(255, 99, 132)",
-          backgroundColor: "rgba(255, 99, 132, 0.5)",
-        },
-      ],
-    });
+    if (selectIndex) {
+      setData({
+        labels,
+        datasets: [
+          {
+            label: statisticsCategories[selectIndex],
+            data: planetsStatistics[selectIndex],
+            borderColor: "rgb(255, 99, 132)",
+            backgroundColor: "rgba(255, 99, 132, 0.5)",
+          },
+        ],
+      });
+    }
   };
 
   return (
