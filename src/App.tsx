@@ -6,6 +6,7 @@ import AllPlanets from "./assets/components/AllPlanetsList/AllPlanetsList";
 import Layout from "./assets/components/Layout/Layout";
 import Statistics from "./assets/components/Statistics/Statistics";
 import PlanetInfo from "./assets/components/PlanetInfo/PlanetInfo";
+import Planet404 from "./assets/components/PlanetInfo/Planet404";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { PlanetsContextProvider } from "./assets/сontext/PlanetsContext";
 
@@ -18,8 +19,9 @@ function App() {
         <AllPlanets />
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route path="/" element={<Navigate replace to="/Earth" />}/>
+            <Route path="/" element={<Navigate replace to="/Earth" />} />
             <Route path="/:id" element={<PlanetInfo />} />
+            <Route path="*" element={<Planet404 />} />
           </Route>
         </Routes>
         <Statistics />
