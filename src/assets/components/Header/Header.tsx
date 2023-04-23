@@ -1,7 +1,7 @@
 import "./Header.scss";
 import logo from "../../images/logo.svg";
 import sun from "../../images/sun.svg";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
 import { useState } from "react";
@@ -27,10 +27,14 @@ export default function Header() {
             }
           >
             <li>
-              <Link to="">Planets</Link>
+              <Link to="#planets" onClick={() => setNavigation(!navigation)}>
+                Planets
+              </Link>
             </li>
             <li>
-              <Link to="">Statistics</Link>
+              <Link to="#statistics" onClick={() => setNavigation(!navigation)}>
+                Statistics
+              </Link>
             </li>
           </ul>
           {

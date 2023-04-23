@@ -98,7 +98,7 @@ export default function Statistics() {
   };
 
   return (
-    <div className="statistics__container">
+    <div id={"statistics"} className="statistics__container">
       <div className="statistics__container__header">Statistics</div>
       <div className="statistics__container__box">
         <div className="statistics__container__thought">

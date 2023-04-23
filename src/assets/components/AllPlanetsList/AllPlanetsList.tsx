@@ -9,7 +9,7 @@ export default function AllPlanets() {
 
   return (
     <div className="all-planets-outer-container" id="planets">
-      <div className="all-planets-inner-container">
+      <div id={"planets"} className="all-planets-inner-container">
         {planets.map((planet: IPlanet) => (
           <PlanetCard planet={planet} key={planet.id} />
         ))}
