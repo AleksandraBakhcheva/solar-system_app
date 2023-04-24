@@ -49,7 +49,13 @@ export const PlanetsContextProvider = ({
     sendApiRequest();
   }, []);
 
-  const values = { loading, setPlanets, planets, sendApiRequest, images };
+  const values = {
+    loading,
+    setPlanets,
+    planets,
+    sendApiRequest,
+    images,
+  };
 
   if (error) return <Error />;
 

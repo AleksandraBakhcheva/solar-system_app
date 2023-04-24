@@ -9,17 +9,18 @@
 .planet-container_wrap {
   @include mainFont;
   margin: 0 auto;
-  max-width: 1384px;
+  max-width: 90%;
 }
 
 .planet-container {
-  height: 500px;
   display: grid;
   gap: 5%;
   grid-template-columns: 1fr 1fr;
-  margin-bottom: 100px;
+  margin-bottom: 4rem;
+  padding-bottom: 3.125rem;
+  overflow: hidden;
 
-  @media screen and (max-width: 1279px) {
+  @media screen and (max-width: 1280px) {
     grid-template-columns: 1fr;
     text-align: center;
     height: fit-content;
@@ -31,9 +32,13 @@
     @include titleFont;
     text-transform: none;
     font-size: 144px;
-    line-height: 209px;
+    line-height: 250px;
 
-    @media screen and (max-width: 1279px) {
+    @media screen and (min-width: 1480px) {
+      justify-content: center;
+    }
+
+    @media screen and (max-width: 1280px) {
       justify-content: center;
       align-items: center;
     }
@@ -62,8 +67,16 @@
 
     img {
       width: 396px;
+
       @media screen and (max-width: 480px) {
         width: 180px;
+      }
+      @media screen and (min-width: 481px) and (max-width: 780px) {
+        width: 250px;
+      }
+
+      @media screen and (min-width: 1480px) {
+        width: 500px;
       }
 
       background-color: transparent;

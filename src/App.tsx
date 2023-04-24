@@ -18,7 +18,7 @@ function App() {
         <AllPlanets />
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route path="/" element={<Navigate replace to="/Earth" />}/>
+            <Route path="/" element={<Navigate replace to="/Earth" />} />
             <Route path="/:id" element={<PlanetInfo />} />
           </Route>
         </Routes>
