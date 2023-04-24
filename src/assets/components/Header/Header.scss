@@ -2,53 +2,51 @@
 @import "../../styles/_Mixins.scss";
 
 .header {
+  display: flex;
+  margin: 0 2rem;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: $block-margin-bottom;
-
-  &__container {
-    display: flex;
-    justify-content: space-evenly;
-  }
 
   &__menu {
     display: flex;
     flex-direction: row;
-  }
-
-  &__menu li {
-    margin-left: 15%;
-  }
-
-  &__images {
-    display: flex;
-    align-items: center;
-  }
-
-  &__logo {
-    margin-left: -20%;
+    gap: 25px;
   }
 
   &-mobile__button {
     display: none;
   }
 
-  &__box {
-    display: flex;
-    align-items: center;
+  ul {
+    list-style: none;
 
-    ul {
-      list-style: none;
+    li:hover {
+      box-shadow: 0 0 0 10px $statistics-border-color;
+      background-color: $main-font-color;
+      border-radius: 20px;
     }
 
     a {
       @include mainFont;
       text-decoration: none;
+
+      &:hover {
+        color: $app-general-background;
+      }
     }
   }
 }
 
-@media screen and (max-width: 920px) {
-  .header {
+@media screen and (max-width: 1024px) {
+  .modal-open {
     overflow: hidden;
+  }
+
+  .header {
+    margin: 0;
+    justify-content: center;
+    overflow-x: hidden;
 
     &__logo {
       position: absolute;
