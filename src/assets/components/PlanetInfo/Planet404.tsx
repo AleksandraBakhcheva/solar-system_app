@@ -5,7 +5,7 @@ export default function Planet404() {
   return (
     <div className="planet-container_wrap">
       <div className="planet-container">
-        <div className="planet-container__name">Uknown object</div>
+        <p className="planet-container__name">Uknown object</p>
         <div className="planet-container__img">
           <img src={planet404} alt="planet" />
         </div>

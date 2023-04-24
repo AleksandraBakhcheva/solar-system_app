@@ -6,10 +6,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer__container">
         <div className="footer__container_link">
-          <a href="https://github.com/AleksandraBakhcheva">
-            <img src={github} alt="github" />
-          </a>
-          <a href="https://github.com/Ann-uta">
+          <a href="https://github.com/AleksandraBakhcheva/solar-system_app">
             <img src={github} alt="github" />
           </a>
         </div>

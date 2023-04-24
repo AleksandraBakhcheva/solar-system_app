@@ -7,15 +7,14 @@ import Loading from "../Loading/Loading";
 import Planet404 from "./Planet404";
 
 export default function PlanetInfo() {
-  //const params = useParams();
+  const params = useParams();
+  const current = params.id;
+  const { images, planets, loading } = useContext(PlanetsContext);
 
-  const { images, planets, loading, planetItem } = useContext(PlanetsContext);
-
-  //const current = planetItem;
-  console.log(planetItem);
-  /*const planet = planets.find(
+  const planetItem = planets.find(
     (item: { englishName: string }) => item.englishName === current
-  );*/
+  );
+
   let imagePath: string = images[planetItem?.englishName];
 
   if (!planetItem && loading) {

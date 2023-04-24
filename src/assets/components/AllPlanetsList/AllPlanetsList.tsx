@@ -1,9 +1,8 @@
 import { useContext } from "react";
 import "./AllPlanetsList.scss";
-import PlanetCard from "./PlanetCard1";
+import PlanetCard from "./PlanetCard";
 import { IPlanet } from "../../utils/Interfaces";
 import { PlanetsContext } from "../../сontext/PlanetsContext";
-import PlanetInfo from "../PlanetInfo/PlanetInfo";
 
 export default function AllPlanets() {
   const { planets } = useContext(PlanetsContext);

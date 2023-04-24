@@ -10,9 +10,6 @@ interface IPlanetContext {
   loading: boolean;
   images: { [key: string]: any };
   sendApiRequest: () => void;
-  planetItem: any;
-  setPlanetItem: (planet: any) => void;
-  // imagePath: string;
 }
 
 export const PlanetsContext = createContext<IPlanetContext>({
@@ -21,9 +18,6 @@ export const PlanetsContext = createContext<IPlanetContext>({
   loading: false,
   images: {},
   sendApiRequest: () => {},
-  planetItem: {},
-  setPlanetItem: () => {},
-  // imagePath: "",
 });
 
 export const PlanetsContextProvider = ({
@@ -51,11 +45,6 @@ export const PlanetsContextProvider = ({
       .catch((error) => setError(error));
   }
 
-  let initialPlanet = planets.find((item) => item.englishName === "Earth");
-  const [planetItem, setPlanetItem] = useState(initialPlanet);
-  console.log(planetItem);
-  //let imagePath: string = images[planetItem!.englishName];
-
   useEffect(() => {
     sendApiRequest();
   }, []);
@@ -66,9 +55,6 @@ export const PlanetsContextProvider = ({
     planets,
     sendApiRequest,
     images,
-    planetItem,
-    setPlanetItem,
-    //  imagePath,
   };
 
   if (error) return <Error />;
