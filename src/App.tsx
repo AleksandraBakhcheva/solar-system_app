@@ -19,7 +19,6 @@ function App() {
         <AllPlanets />
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route path="/" element={<Navigate replace to="/Earth" />} />
             <Route path="/:id" element={<PlanetInfo />} />
             <Route path="*" element={<Planet404 />} />
           </Route>
@@ -32,3 +31,4 @@ function App() {
 }
 
 export default App;
+//<Route path="/" element={<Navigate replace to="/Earth" />} />

@@ -7,31 +7,34 @@ import Loading from "../Loading/Loading";
 import Planet404 from "./Planet404";
 
 export default function PlanetInfo() {
-  const params = useParams();
-  const current = params.id;
-  const { images, planets, loading } = useContext(PlanetsContext);
+  //const params = useParams();
 
-  const planet = planets.find(
+  const { images, planets, loading, planetItem } = useContext(PlanetsContext);
+
+  //const current = planetItem;
+  console.log(planetItem);
+  /*const planet = planets.find(
     (item: { englishName: string }) => item.englishName === current
-  );
-  let imagePath: string = images[current!];
+  );*/
+  let imagePath: string = images[planetItem?.englishName];
 
-  if (!planet && loading) {
+  if (!planetItem && loading) {
     return <Loading />;
   }
-  if (!planet && !loading) {
+  if (!planetItem && !loading) {
     return <Planet404 />;
   }
 
   return (
     <div className="planet-container_wrap">
       <div className="planet-container">
-        <div className="planet-container__name">{planet.englishName}</div>
+        <div className="planet-container__name">{planetItem.englishName}</div>
         <div className="planet-container__img">
           <img src={imagePath} alt="planet" />
         </div>
       </div>
-      <PlanetTable planet={planet} />
+      <PlanetTable planet={planetItem} />
     </div>
   );
 }
+//

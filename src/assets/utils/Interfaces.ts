@@ -35,4 +35,5 @@ export interface IPlanet {
 
 export interface PlanetProps {
   planet: IPlanet;
+  onClick?: any;
 }
