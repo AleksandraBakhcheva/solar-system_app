@@ -9,7 +9,11 @@
 .planet-container_wrap {
   @include mainFont;
   margin: 0 auto;
-  max-width: 90%;
+  max-width: 1384px;
+
+  @media screen and (min-width: 1800px) {
+    min-width: 75%;
+  }
 }
 
 .planet-container {
@@ -34,7 +38,7 @@
     font-size: 144px;
     line-height: 250px;
 
-    @media screen and (min-width: 1480px) {
+    @media screen and (min-width: 1800px) {
       justify-content: center;
     }
 

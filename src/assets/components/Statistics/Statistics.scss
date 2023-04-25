@@ -2,8 +2,12 @@
 @import "../../styles/_Mixins.scss";
 
 .statistics__container {
-  max-width: 1314px;
+  max-width: 1384px;
   margin: 0 auto;
+
+  @media screen and (min-width: 1800px) {
+    min-width: 75%;
+  }
 
   &__box {
     display: grid;

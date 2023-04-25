@@ -2,12 +2,16 @@
 @import "../../styles/_Mixins.scss";
 
 .all-planets-outer-container {
-  max-width: 90%;
+  max-width: 1384px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   overflow-x: hidden;
   margin-bottom: 50px;
+
+  @media screen and (min-width: 1800px) {
+    min-width: 80%;
+  }
 }
 
 .all-planets-inner-container {
@@ -23,7 +27,7 @@
     text-decoration: none;
   }
 
-  @media screen and (min-width: 1480px) {
+  @media screen and (min-width: 1385px) {
     justify-content: center;
   }
 }
@@ -64,8 +68,8 @@
     font-size: 14px;
     background-color: transparent;
   }
-  @media screen and (min-width: 1800px) {
-    zoom: 120%;
+  @media screen and (min-width: 2000px) {
+    zoom: 115%;
   }
 }
 

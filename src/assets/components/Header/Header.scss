@@ -3,10 +3,15 @@
 
 .header {
   display: flex;
-  margin: 0 2rem;
+  margin: 0 auto;
   justify-content: space-between;
   align-items: center;
   margin-bottom: $block-margin-bottom;
+  max-width: 1384px;
+
+  @media screen and (min-width: 1800px) {
+    min-width: 75%;
+  }
 
   &__menu {
     display: flex;
