@@ -2,12 +2,18 @@
 @import "../../styles/_Mixins.scss";
 
 .footer {
+  display: flex;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  justify-content: center;
   @include mainFont;
-  text-transform: uppercase;
 
-  &__container {
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
+  a svg {
+    margin-right: 3px;
+    cursor: pointer;
+
+    &:hover {
+      fill: $github-hover-color;
+    }
   }
 }
