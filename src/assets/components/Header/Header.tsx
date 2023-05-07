@@ -15,36 +15,38 @@ export default function Header() {
 
   return (
     <header className="header">
-      <Link to="/">
-        <img className="header__logo" src={logo} alt="logo" />
-      </Link>
-      <img className="header__image" src={sun} alt="sun" />
-      <ul
-        className={
-          modal
-            ? ["header__menu", "header__menu_active"].join(" ")
-            : "header__menu"
-        }
-      >
-        <li>
-          <Link to="#planets" onClick={() => setModalOpen(!modal)}>
-            Planets
-          </Link>
-        </li>
-        <li>
-          <Link to="#statistics" onClick={() => setModalOpen(!modal)}>
-            Statistics
-          </Link>
-        </li>
-      </ul>
-      {
-        <div
-          onClick={() => setModalOpen(!modal)}
-          className="header-mobile__button"
+      <div className="header__container">
+        <Link to="/">
+          <img className="header__logo" src={logo} alt="logo" />
+        </Link>
+        <img className="header__image" src={sun} alt="sun" />
+        <ul
+          className={
+            modal
+              ? ["header__menu", "header__menu_active"].join(" ")
+              : "header__menu"
+          }
         >
-          {modal ? <ImCross size={30} /> : <GiHamburgerMenu size={40} />}
-        </div>
-      }
+          <li>
+            <Link to="#planets" onClick={() => setModalOpen(!modal)}>
+              Planets
+            </Link>
+          </li>
+          <li>
+            <Link to="#statistics" onClick={() => setModalOpen(!modal)}>
+              Statistics
+            </Link>
+          </li>
+        </ul>
+        {
+          <div
+            onClick={() => setModalOpen(!modal)}
+            className="header-mobile__button"
+          >
+            {modal ? <ImCross size={30} /> : <GiHamburgerMenu size={40} />}
+          </div>
+        }
+      </div>
     </header>
   );
 }

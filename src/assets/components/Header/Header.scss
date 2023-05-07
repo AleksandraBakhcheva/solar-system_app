@@ -2,15 +2,18 @@
 @import "../../styles/_Mixins.scss";
 
 .header {
-  display: flex;
-  margin: 0 1rem;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: $block-margin-bottom;
-  max-width: 1384px;
+  &__container {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: $block-margin-bottom;
+    max-width: 1384px;
 
-  @media screen and (min-width: 1800px) {
-    min-width: 75%;
+    @media screen and (min-width: 1024px) {
+      min-width: 75%;
+      justify-content: space-between;
+    }
   }
 
   &__menu {
