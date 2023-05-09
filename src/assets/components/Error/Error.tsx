@@ -10,7 +10,7 @@ export default function Error() {
       <img src={error404} alt="error404" />
       <motion.button
         onClick={() => {
-          window.location.href = "/";
+          window.location.href = "/solar-system_app";
         }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9, x: "-5px", y: "5px" }}
