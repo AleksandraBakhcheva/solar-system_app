@@ -1,7 +1,7 @@
 import "./PlanetInfo.scss";
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
-import { PlanetsContext } from "../../сontext/PlanetsContext";
+import { PlanetsContext } from "../../сontexts/PlanetsContext";
 import PlanetTable from "../PlanetTable/PlanetTable";
 import Loading from "../Loading/Loading";
 import Planet404 from "./Planet404";

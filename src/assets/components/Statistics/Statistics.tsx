@@ -1,6 +1,6 @@
 import "./Statistics.scss";
 import { useContext, useState } from "react";
-import { PlanetsContext } from "../../сontext/PlanetsContext";
+import { PlanetsContext } from "../../сontexts/PlanetsContext";
 import { statisticsCategories } from "../../utils/StatisticsCategories";
 import thought from "../../images/thought.svg";
 import astronaut from "../../images/astronaut.svg";

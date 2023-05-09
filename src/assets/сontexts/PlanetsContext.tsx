@@ -1,18 +1,11 @@
-import { SetStateAction, createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { IPlanet } from "../utils/Interfaces";
 import { planetsPictures } from "../utils/PlanetsPictures";
 import { planetsNames } from "../utils/PlanetsNames";
+import { PlanetContextType } from "../utils/Types";
 import Error from "../components/Error/Error";
 
-interface IPlanetContext {
-  setPlanets: (value: SetStateAction<IPlanet[]>) => void;
-  planets: any;
-  loading: boolean;
-  planetsPictures: { [key: string]: any };
-  sendApiRequest: () => void;
-}
-
-export const PlanetsContext = createContext<IPlanetContext>({
+export const PlanetsContext = createContext<PlanetContextType>({
   setPlanets: () => {},
   planets: [],
   loading: false,
@@ -56,6 +49,8 @@ export const PlanetsContextProvider = ({
     sendApiRequest,
     planetsPictures,
   };
+
+  console.log(planets);
 
   if (error) return <Error />;
 
