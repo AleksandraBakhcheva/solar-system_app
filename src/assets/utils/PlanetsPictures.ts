@@ -8,7 +8,7 @@ import Saturn from "../images/saturn.png";
 import Uranus from "../images/uranus.png";
 import Venus from "../images/venus.png";
 
-export const images: { [key: string]: any } = {
+export const planetsPictures: { [key: string]: string } = {
   Mercury: Mercury,
   Venus: Venus,
   Earth: Earth,

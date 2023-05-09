@@ -9,13 +9,13 @@ import Planet404 from "./Planet404";
 export default function PlanetInfo() {
   const params = useParams();
   const current = params.id;
-  const { images, planets, loading } = useContext(PlanetsContext);
+  const { planetsPictures, planets, loading } = useContext(PlanetsContext);
 
   const planetItem = planets.find(
     (item: { englishName: string }) => item.englishName === current
   );
 
-  let imagePath: string = images[planetItem?.englishName];
+  let imagePath: string = planetsPictures[planetItem?.englishName];
 
   if (!planetItem && loading) {
     return <Loading />;

@@ -33,6 +33,6 @@ export interface IPlanet {
   vol?: { volValue: number; volExponent: number };
 }
 
-export interface PlanetProps {
+export interface IPlanetProps {
   planet: IPlanet;
 }

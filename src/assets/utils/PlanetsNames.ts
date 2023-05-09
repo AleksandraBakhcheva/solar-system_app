@@ -1,4 +1,4 @@
-export const needNames: string[] = [
+export const planetsNames: string[] = [
   "Mercury",
   "Venus",
   "Earth",

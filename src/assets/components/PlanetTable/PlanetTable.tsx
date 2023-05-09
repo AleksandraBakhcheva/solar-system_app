@@ -1,7 +1,7 @@
 import "./PlanetTable.scss";
-import { PlanetProps } from "../../utils/Interfaces";
+import { IPlanetProps } from "../../utils/Interfaces";
 
-export default function PlanetTable({ planet }: PlanetProps) {
+export default function PlanetTable({ planet }: IPlanetProps) {
   return (
     <div className="planet-container_table">
       <div className="planet-container_table__section">

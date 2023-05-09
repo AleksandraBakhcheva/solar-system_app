@@ -1,14 +1,14 @@
 import { SetStateAction, createContext, useEffect, useState } from "react";
 import { IPlanet } from "../utils/Interfaces";
-import { images } from "../utils/images";
-import { needNames } from "../utils/needNames";
+import { planetsPictures } from "../utils/PlanetsPictures";
+import { planetsNames } from "../utils/PlanetsNames";
 import Error from "../components/Error/Error";
 
 interface IPlanetContext {
   setPlanets: (value: SetStateAction<IPlanet[]>) => void;
   planets: any;
   loading: boolean;
-  images: { [key: string]: any };
+  planetsPictures: { [key: string]: any };
   sendApiRequest: () => void;
 }
 
@@ -16,7 +16,7 @@ export const PlanetsContext = createContext<IPlanetContext>({
   setPlanets: () => {},
   planets: [],
   loading: false,
-  images: {},
+  planetsPictures: {},
   sendApiRequest: () => {},
 });
 
@@ -36,7 +36,7 @@ export const PlanetsContextProvider = ({
       .then((res) => {
         const planetList: IPlanet[] = res.bodies;
         const needList: IPlanet[] = planetList.filter((planet) =>
-          needNames.includes(planet.englishName)
+          planetsNames.includes(planet.englishName)
         );
         setPlanets(needList);
         setLoading(false);
@@ -54,7 +54,7 @@ export const PlanetsContextProvider = ({
     setPlanets,
     planets,
     sendApiRequest,
-    images,
+    planetsPictures,
   };
 
   if (error) return <Error />;
