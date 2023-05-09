@@ -1,9 +1,40 @@
 @import "../../styles/_Variables.scss";
 @import "../../styles/_Mixins.scss";
 
-.error_wrap {
+.error__container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   @include mainFont;
-  text-align: center;
-  overflow: hidden;
-  padding-top: 20vh;
+
+  h1 {
+    text-align: center;
+
+    @media screen and (max-width: 480px) {
+      font-size: 2rem;
+    }
+  }
+
+  img {
+    width: 300px;
+    background-color: transparent;
+
+    @media screen and (max-width: 480px) {
+      width: 75%;
+    }
+  }
+
+  button {
+    width: 200px;
+    height: 45px;
+    @include statBorder;
+    @include mainFont;
+
+    &:hover {
+      color: $app-general-background;
+      background-color: $main-font-color;
+    }
+  }
 }
