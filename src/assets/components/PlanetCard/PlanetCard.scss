@@ -29,6 +29,10 @@
     align-items: center;
   }
 
+  a:focus {
+    outline: none;
+  }
+
   &_img {
     width: 42px;
     background-color: transparent;
