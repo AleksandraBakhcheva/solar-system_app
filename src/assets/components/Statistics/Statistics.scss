@@ -63,8 +63,9 @@
     img:last-child {
       width: 197px;
       height: 475px;
-      margin: -28px 4rem;
+      margin-top: -28px;
       margin-left: 230px;
+      margin-bottom: 4rem;
 
       @media screen and (max-width: 480px) {
         width: 153px;
