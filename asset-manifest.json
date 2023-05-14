@@ -1,32 +1,32 @@
 {
   "files": {
-    "main.css": "/solar-system_app/static/css/main.37909444.css",
-    "main.js": "/solar-system_app/static/js/main.fd5620fb.js",
+    "main.css": "/solar-system_app/static/css/main.2d78cda7.css",
+    "main.js": "/solar-system_app/static/js/main.d46b442c.js",
     "static/media/planet404.png": "/solar-system_app/static/media/planet404.db8ac4baf74b92446854.png",
-    "static/media/uranus.png": "/solar-system_app/static/media/uranus.ce8de86b7508e151e70d.png",
+    "static/media/neptune.png": "/solar-system_app/static/media/neptune.16125f7e97f202b30df1.png",
     "static/media/mars.png": "/solar-system_app/static/media/mars.faab658ba2f26214c95c.png",
     "static/media/earth.png": "/solar-system_app/static/media/earth.dd77b21702394d9a5b75.png",
+    "static/media/pluto.png": "/solar-system_app/static/media/pluto.2a297b91635f4bad7413.png",
     "static/media/mercury.png": "/solar-system_app/static/media/mercury.0c0a08ccf262ac482f72.png",
     "static/media/venus.png": "/solar-system_app/static/media/venus.56674796fb98cccb0a90.png",
+    "static/media/saturn.png": "/solar-system_app/static/media/saturn.b6304d6e269fc99758d8.png",
     "static/media/jupiter.png": "/solar-system_app/static/media/jupiter.04d72045fc40844e693f.png",
-    "static/media/saturn.png": "/solar-system_app/static/media/saturn.6faefa6723e9d3ddd70c.png",
     "static/media/Rock3D-Regular.woff": "/solar-system_app/static/media/Rock3D-Regular.e094e13f7a2077330738.woff",
-    "static/media/neptune.png": "/solar-system_app/static/media/neptune.c82bd6d25817f6abe93d.png",
     "static/media/sun.svg": "/solar-system_app/static/media/sun.2c0a7cf035d39ab686a6f3b3d62e0832.svg",
     "static/media/astronaut.svg": "/solar-system_app/static/media/astronaut.3c5f12a113d3b25941392fc7e452f7e9.svg",
-    "static/media/pluto.png": "/solar-system_app/static/media/pluto.bee9d8c51804bca9710f.png",
     "static/media/error404.svg": "/solar-system_app/static/media/error404.c757d116e30f8c5b3d760fd85cb54421.svg",
     "static/media/stars.svg": "/solar-system_app/static/media/stars.373a47c923a608acea5c.svg",
+    "static/media/uranus.png": "/solar-system_app/static/media/uranus.44408646f74f0bfa5923.png",
     "static/media/logo.svg": "/solar-system_app/static/media/logo.f942648f1001f7816e879a385def72f5.svg",
     "static/media/thought.svg": "/solar-system_app/static/media/thought.392d09e011dae40e5358f9a94e2461da.svg",
     "static/media/rocket.svg": "/solar-system_app/static/media/rocket.72273813622751a21a79.svg",
     "index.html": "/solar-system_app/index.html",
     "static/media/arrow.svg": "/solar-system_app/static/media/arrow.e7d319c1674b0c694f84.svg",
-    "main.37909444.css.map": "/solar-system_app/static/css/main.37909444.css.map",
-    "main.fd5620fb.js.map": "/solar-system_app/static/js/main.fd5620fb.js.map"
+    "main.2d78cda7.css.map": "/solar-system_app/static/css/main.2d78cda7.css.map",
+    "main.d46b442c.js.map": "/solar-system_app/static/js/main.d46b442c.js.map"
   },
   "entrypoints": [
-    "static/css/main.37909444.css",
-    "static/js/main.fd5620fb.js"
+    "static/css/main.2d78cda7.css",
+    "static/js/main.d46b442c.js"
   ]
 }
