@@ -1,4 +1,4 @@
-import "./AllPlanetsList.scss";
+import "./PlanetCard.scss";
 import { useContext, useEffect, useRef } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { IPlanetProps } from "../../utils/Interfaces";
@@ -17,10 +17,10 @@ export default function PlanetCard({ planet }: IPlanetProps) {
   }, [location.pathname]);
 
   return (
-    <div className="card" id={planet.englishName}>
+    <div className="card__container" id={planet.englishName}>
       <NavLink to={`/${planet.englishName}`} ref={cardRef}>
-        <img className="card__img" src={imagePath} alt="planet" />
-        <div className="card__name">{planet.englishName}</div>
+        <img className="card__container_img" src={imagePath} alt="planet" />
+        <div className="card__container_name">{planet.englishName}</div>
       </NavLink>
     </div>
   );

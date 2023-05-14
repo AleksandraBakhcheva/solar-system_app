@@ -1,13 +1,10 @@
-@import "../../styles/_Variables.scss";
-@import "../../styles/_Mixins.scss";
-
-.all-planets-outer-container {
+.all-planets__container-outer {
+  display: flex;
   max-width: 1384px;
   margin: 0 auto;
-  display: flex;
+  margin-bottom: 180px;
   justify-content: center;
   overflow-x: hidden;
-  margin-bottom: 180px;
 
   @media screen and (max-width: 1280px) {
     margin-bottom: 115px;
@@ -18,9 +15,9 @@
   }
 }
 
-.all-planets-inner-container {
-  width: 100%;
+.all-planets__container-inner {
   display: flex;
+  width: 100%;
   justify-content: flex-start;
   gap: 1%;
   overflow-x: scroll;
@@ -31,70 +28,11 @@
     text-decoration: none;
   }
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   @media screen and (min-width: 1385px) {
     justify-content: center;
-  }
-}
-
-.all-planets-inner-container::-webkit-scrollbar {
-  display: none;
-}
-
-.card {
-  width: 8.5rem;
-  height: 4.625rem;
-  box-sizing: border-box;
-  border: 4px solid $main-font-color;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-
-  a {
-    min-width: 100%;
-    min-height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-  a:focus {
-    outline: none;
-  }
-
-  img {
-    width: 42px;
-    background-color: transparent;
-  }
-
-  .card__name {
-    @include mainFont;
-    font-size: 14px;
-    background-color: transparent;
-  }
-  @media screen and (min-width: 2000px) {
-    zoom: 115%;
-  }
-}
-
-.active {
-  background-color: $main-font-color;
-
-  .card__name {
-    color: $app-general-background;
-  }
-}
-
-.card:hover {
-  @keyframes planet {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  .card__img {
-    animation: planet 4s linear 0s infinite;
   }
 }

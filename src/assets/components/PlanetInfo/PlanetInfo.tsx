@@ -2,9 +2,9 @@ import "./PlanetInfo.scss";
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { PlanetsContext } from "../../сontexts/PlanetsContext";
-import PlanetTable from "../PlanetTable/PlanetTable";
 import Loading from "../Loading/Loading";
-import Planet404 from "./Planet404";
+import PlanetTable from "../PlanetTable/PlanetTable";
+import UnknownPlanet from "../UnknownPlanet/UnknownPlanet";
 
 export default function PlanetInfo() {
   const params = useParams();
@@ -21,14 +21,14 @@ export default function PlanetInfo() {
     return <Loading />;
   }
   if (!planetItem && !loading) {
-    return <Planet404 />;
+    return <UnknownPlanet />;
   }
 
   return (
-    <div className="planet-container_wrap">
-      <div className="planet-container">
-        <div className="planet-container__name">{planetItem.englishName}</div>
-        <div className="planet-container__img">
+    <div className="planet__container">
+      <div className="planet__container_box">
+        <div className="planet__container_name">{planetItem.englishName}</div>
+        <div className="planet__container_img">
           <img src={imagePath} alt="planet" />
         </div>
       </div>
@@ -36,4 +36,3 @@ export default function PlanetInfo() {
     </div>
   );
 }
-//

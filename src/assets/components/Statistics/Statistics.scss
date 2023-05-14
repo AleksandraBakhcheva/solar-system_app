@@ -1,5 +1,4 @@
-@import "../../styles/_Variables.scss";
-@import "../../styles/_Mixins.scss";
+@import "../../styles/General.scss";
 
 .statistics__container {
   max-width: 1384px;
@@ -9,7 +8,7 @@
     min-width: 75%;
   }
 
-  &__box {
+  &_box {
     display: grid;
     grid-template-columns: 1fr 2fr;
 
@@ -19,25 +18,25 @@
     }
   }
 
-  &__header {
+  &_header {
     display: flex;
+    margin-bottom: $block-margin-bottom;
     justify-content: flex-end;
     @include titleFont;
-    margin-bottom: $block-margin-bottom;
 
     @media screen and (max-width: 480px) {
+      justify-content: center;
       font-size: 33px;
       line-height: 48px;
-      justify-content: center;
     }
 
     @media screen and (min-width: 481px) and (max-width: 1024px) {
-      font-size: 60px;
       justify-content: center;
+      font-size: 60px;
     }
   }
 
-  &__thought {
+  &_thought {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -64,9 +63,8 @@
     img:last-child {
       width: 197px;
       height: 475px;
+      margin: -28px 4rem;
       margin-left: 230px;
-      margin-top: -28px;
-      margin-bottom: 4rem;
 
       @media screen and (max-width: 480px) {
         width: 153px;
@@ -99,7 +97,7 @@
     }
   }
 
-  &__buttons {
+  &_buttons {
     display: flex;
     height: 32%;
     justify-content: center;
@@ -167,7 +165,7 @@
     }
   }
 
-  &__graph {
+  &_graph {
     width: 95%;
     margin: 2rem auto 5rem;
 

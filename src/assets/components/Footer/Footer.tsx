@@ -2,7 +2,7 @@ import "./Footer.scss";
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer__container">
       <a
         href="https://github.com/AleksandraBakhcheva/solar-system_app"
         target="new__link"

@@ -1,16 +1,10 @@
-@import "../../styles/_Variables.scss";
-@import "../../styles/_Mixins.scss";
+@import "../../styles/General.scss";
 
-.not_found__message {
-  @include mainFont;
-  text-align: center;
-}
-
-.planet-container_wrap {
-  @include mainFont;
-  margin: 0 auto;
+.planet__container {
   max-width: 1384px;
+  margin: 0 auto;
   margin-bottom: 180px;
+  @include mainFont;
 
   @media screen and (max-width: 1280px) {
     margin-bottom: 115px;
@@ -19,29 +13,29 @@
   @media screen and (min-width: 1800px) {
     min-width: 75%;
   }
-}
 
-.planet-container {
-  display: grid;
-  gap: 5%;
-  grid-template-columns: 1fr 1fr;
-  margin-bottom: 4rem;
-  padding-bottom: 3.125rem;
-  overflow: hidden;
+  &_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 4rem;
+    padding-bottom: 3.125rem;
+    gap: 5%;
+    overflow: hidden;
 
-  @media screen and (max-width: 1280px) {
-    grid-template-columns: 1fr;
-    text-align: center;
-    height: fit-content;
+    @media screen and (max-width: 1280px) {
+      grid-template-columns: 1fr;
+      height: fit-content;
+      text-align: center;
+    }
   }
 
-  &__name {
+  &_name {
     display: flex;
     align-items: flex-end;
     @include titleFont;
-    text-transform: none;
     font-size: 144px;
     line-height: 250px;
+    text-transform: none;
 
     @media screen and (min-width: 1800px) {
       justify-content: center;
@@ -55,6 +49,7 @@
     @media screen and (min-width: 781px) and (max-width: 1024px) {
       font-size: 120px;
     }
+
     @media screen and (min-width: 541px) and (max-width: 780px) {
       font-size: 90px;
     }
@@ -69,17 +64,20 @@
     }
   }
 
-  &__img {
+  &_img {
     display: flex;
     justify-content: center;
     align-items: center;
 
     img {
       width: 396px;
+      background-color: transparent;
+      animation: planet 10s linear 0s infinite;
 
       @media screen and (max-width: 480px) {
         width: 180px;
       }
+
       @media screen and (min-width: 481px) and (max-width: 780px) {
         width: 250px;
       }
@@ -87,17 +85,6 @@
       @media screen and (min-width: 1480px) {
         width: 500px;
       }
-
-      background-color: transparent;
-      @keyframes planet {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
-      animation: planet 10s linear 0s infinite;
     }
   }
 }

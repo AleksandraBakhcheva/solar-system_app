@@ -1,9 +1,7 @@
-@import "../../styles/_Variables.scss";
-@import "../../styles/_Mixins.scss";
+@import "../../styles/General.scss";
 
-.loading_wrap h1,
-p {
+.loading__container h1 {
+  @include mainFont;
   text-align: center;
   overflow: hidden;
-  @include mainFont;
 }

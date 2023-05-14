@@ -1,7 +1,6 @@
-@import "../../styles/_Variables.scss";
-@import "../../styles/_Mixins.scss";
+@import "../../styles/General.scss";
 
-.footer {
+.footer__container {
   display: flex;
   margin-top: 1.5rem;
   padding: 1rem;

@@ -99,9 +99,9 @@ export default function Statistics() {
 
   return (
     <div id={"statistics"} className="statistics__container">
-      <div className="statistics__container__header">Statistics</div>
-      <div className="statistics__container__box">
-        <div className="statistics__container__thought">
+      <div className="statistics__container_header">Statistics</div>
+      <div className="statistics__container_box">
+        <div className="statistics__container_thought">
           <p>
             Hi, I'm Nick. I will help <br /> you to understand how <br /> the
             planets differ from <br /> each other.
@@ -110,7 +110,7 @@ export default function Statistics() {
           <img src={astronaut} alt="astronaut" />
         </div>
         <div>
-          <div className="statistics__container__buttons">
+          <div className="statistics__container_buttons">
             <select
               name="statistics"
               onChange={(e) => {
@@ -134,7 +134,7 @@ export default function Statistics() {
               Compare
             </motion.button>
           </div>
-          <div className="statistics__container__graph">
+          <div className="statistics__container_graph">
             <Line width="400px" height="400px" options={options} data={data} />
           </div>
         </div>

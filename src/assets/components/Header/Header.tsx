@@ -1,10 +1,10 @@
 import "./Header.scss";
+import { useState, useEffect } from "react";
+import { HashLink as Link } from "react-router-hash-link";
 import logo from "../../images/logo.svg";
 import sun from "../../images/sun.svg";
-import { HashLink as Link } from "react-router-hash-link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
-import { useState, useEffect } from "react";
 
 export default function Header() {
   const [modal, setModalOpen] = useState(false);
@@ -14,17 +14,20 @@ export default function Header() {
   }, [modal]);
 
   return (
-    <header className="header">
-      <div className="header__container">
+    <header className="header__container">
+      <div className="header__container_box">
         <Link to="/">
-          <img className="header__logo" src={logo} alt="logo" />
+          <img className="header__container_logo" src={logo} alt="logo" />
         </Link>
-        <img className="header__image" src={sun} alt="sun" />
+        <img className="header__container_image" src={sun} alt="sun" />
         <ul
           className={
             modal
-              ? ["header__menu", "header__menu_active"].join(" ")
-              : "header__menu"
+              ? [
+                  "header__container_menu",
+                  "header__container_menu-active",
+                ].join(" ")
+              : "header__container_menu"
           }
         >
           <li>
@@ -41,7 +44,7 @@ export default function Header() {
         {
           <div
             onClick={() => setModalOpen(!modal)}
-            className="header-mobile__button"
+            className="header__container_mobile-button"
           >
             {modal ? <ImCross size={30} /> : <GiHamburgerMenu size={40} />}
           </div>

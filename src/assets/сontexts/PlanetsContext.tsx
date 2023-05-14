@@ -28,12 +28,12 @@ export const PlanetsContextProvider = ({
       .then((res) => res.json())
       .then((res) => {
         const planetList: IPlanet[] = res.bodies;
-        const needList: IPlanet[] = planetList.filter((planet) =>
+        const neededPlanetList: IPlanet[] = planetList.filter((planet) =>
           planetsNames.includes(planet.englishName)
         );
-        setPlanets(needList);
+        setPlanets(neededPlanetList);
         setLoading(false);
-        return needList;
+        return neededPlanetList;
       })
       .catch((error) => setError(error));
   }
@@ -49,8 +49,6 @@ export const PlanetsContextProvider = ({
     sendApiRequest,
     planetsPictures,
   };
-
-  console.log(planets);
 
   if (error) return <Error />;
 
