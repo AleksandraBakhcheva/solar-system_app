@@ -29,20 +29,36 @@ export default function Statistics() {
   );
 
   const { planets } = useContext(PlanetsContext);
-  const [selectIndex, setSelectIndex] = useState<any>("");
+  const [selectIndex, setSelectIndex] = useState<string>();
 
   const planetsStatistics: number[] = [];
-  const labels = planets.map((a: any) => a.englishName);
-  let planentsDensity = planets.map((a: any) => a.density);
-  let planetsGravity = planets.map((a: any) => a.gravity);
-  let planetsMass = planets.map((a: any) => a.mass.massValue);
-  let planetsVolume = planets.map((a: any) => a.vol.volValue);
-  let planetsEscape = planets.map((a: any) => a.escape);
-  let planetsAvgTemp = planets.map((a: any) => a.avgTemp);
-  let planetsMeanRadius = planets.map((a: any) => a.meanRadius);
-  let planetsPolarRadius = planets.map((a: any) => a.polarRadius);
-  let planetsSideralOrbit = planets.map((a: any) => a.sideralOrbit);
-  let planetsEccentricity = planets.map((a: any) => a.eccentricity);
+  const labels = planets.map(
+    (item: { englishName: string }) => item.englishName
+  );
+  let planentsDensity = planets.map(
+    (item: { density: number }) => item.density
+  );
+  let planetsGravity = planets.map((item: { gravity: number }) => item.gravity);
+  let planetsMass = planets.map(
+    (item: { mass: { massValue: number } }) => item.mass.massValue
+  );
+  let planetsVolume = planets.map(
+    (item: { vol: { volValue: number } }) => item.vol.volValue
+  );
+  let planetsEscape = planets.map((item: { escape: number }) => item.escape);
+  let planetsAvgTemp = planets.map((item: { avgTemp: number }) => item.avgTemp);
+  let planetsMeanRadius = planets.map(
+    (item: { meanRadius: number }) => item.meanRadius
+  );
+  let planetsPolarRadius = planets.map(
+    (item: { polarRadius: number }) => item.polarRadius
+  );
+  let planetsSideralOrbit = planets.map(
+    (item: { sideralOrbit: number }) => item.sideralOrbit
+  );
+  let planetsEccentricity = planets.map(
+    (item: { eccentricity: number }) => item.eccentricity
+  );
 
   planetsStatistics.push(
     planentsDensity,
@@ -86,8 +102,8 @@ export default function Statistics() {
         labels,
         datasets: [
           {
-            label: statisticsCategories[selectIndex],
-            data: planetsStatistics[selectIndex],
+            label: statisticsCategories[Number(selectIndex)],
+            data: planetsStatistics[Number(selectIndex)],
             pointRadius: 8,
             borderColor: "rgb(255, 99, 132)",
             backgroundColor: "rgba(255, 99, 132, 0.5)",
@@ -113,8 +129,8 @@ export default function Statistics() {
           <div className="statistics__container_buttons">
             <select
               name="statistics"
-              onChange={(e) => {
-                setSelectIndex(e.target.value);
+              onChange={(evt) => {
+                setSelectIndex(evt.target.value);
               }}
             >
               <option>Choose a comparison option</option>
