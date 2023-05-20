@@ -11,7 +11,7 @@
   h1 {
     text-align: center;
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: $xxs) {
       font-size: 2rem;
     }
   }
@@ -20,7 +20,7 @@
     width: 300px;
     background-color: transparent;
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: $xxs) {
       width: 75%;
     }
   }

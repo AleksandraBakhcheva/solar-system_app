@@ -4,7 +4,7 @@
   max-width: 1384px;
   margin: 0 auto;
 
-  @media screen and (min-width: 1800px) {
+  @media screen and (min-width: $xxl) {
     min-width: 75%;
   }
 
@@ -12,7 +12,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
 
-    @media screen and (max-width: 1279px) {
+    @media screen and (max-width: $l) {
       grid-template-columns: 1fr;
       margin-bottom: 2rem;
     }
@@ -24,13 +24,13 @@
     justify-content: flex-end;
     @include titleFont;
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: $xxs) {
       justify-content: center;
       font-size: 33px;
       line-height: 48px;
     }
 
-    @media screen and (min-width: 481px) and (max-width: 1024px) {
+    @media screen and (min-width: 481px) and (max-width: $m) {
       justify-content: center;
       font-size: 60px;
     }
@@ -41,7 +41,7 @@
     flex-direction: column;
     align-items: flex-start;
 
-    @media screen and (max-width: 1279px) {
+    @media screen and (max-width: $l) {
       align-items: center;
     }
 
@@ -49,13 +49,13 @@
       z-index: 1;
       background-color: transparent;
 
-      @media screen and (max-width: 480px) {
+      @media screen and (max-width: $xxs) {
         width: 260px;
         height: 260px;
         margin-left: -80px;
       }
 
-      @media screen and (min-width: 481px) and (max-width: 1279px) {
+      @media screen and (min-width: 481px) and (max-width: $l) {
         margin-left: -80px;
       }
     }
@@ -67,7 +67,7 @@
       margin-left: 230px;
       margin-bottom: 4rem;
 
-      @media screen and (max-width: 480px) {
+      @media screen and (max-width: $xxs) {
         width: 153px;
         height: 370px;
         margin-top: -28px;
@@ -85,14 +85,14 @@
       z-index: 2;
       background-color: transparent;
 
-      @media screen and (max-width: 480px) {
+      @media screen and (max-width: $xxs) {
         margin-bottom: -144px;
         margin-left: -90px;
         font-size: 16px;
         line-height: 25px;
       }
 
-      @media screen and (min-width: 481px) and (max-width: 1279px) {
+      @media screen and (min-width: 481px) and (max-width: $l) {
         margin-left: -90px;
       }
     }
@@ -104,7 +104,7 @@
     justify-content: center;
     align-items: flex-end;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: $m) {
       margin-top: $block-margin-top;
       flex-direction: column;
       align-items: center;
@@ -140,7 +140,7 @@
         background-color: lighten($app-general-background, 5);
       }
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: $m) {
         margin-right: 0;
         margin-bottom: 2rem;
         font-size: 15px;
@@ -159,7 +159,7 @@
         background-color: $main-font-color;
       }
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: $m) {
         font-size: 20px;
         line-height: 50px;
       }

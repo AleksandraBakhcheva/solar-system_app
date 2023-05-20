@@ -8,7 +8,7 @@
     @include titleFont;
     text-align: center;
 
-    @media screen and (max-width: 540px) {
+    @media screen and (max-width: $xs) {
       font-size: 33px;
       line-height: 48px;
     }
