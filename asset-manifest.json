@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/solar-system_app/static/css/main.5d00a5fd.css",
+    "main.css": "/solar-system_app/static/css/main.5de44fd0.css",
     "main.js": "/solar-system_app/static/js/main.25da0c11.js",
     "static/media/planet404.png": "/solar-system_app/static/media/planet404.5e9a3462ed1f5da3e7d4.png",
     "static/media/neptune.png": "/solar-system_app/static/media/neptune.16125f7e97f202b30df1.png",
@@ -22,11 +22,11 @@
     "static/media/rocket.svg": "/solar-system_app/static/media/rocket.72273813622751a21a79.svg",
     "index.html": "/solar-system_app/index.html",
     "static/media/arrow.svg": "/solar-system_app/static/media/arrow.e7d319c1674b0c694f84.svg",
-    "main.5d00a5fd.css.map": "/solar-system_app/static/css/main.5d00a5fd.css.map",
+    "main.5de44fd0.css.map": "/solar-system_app/static/css/main.5de44fd0.css.map",
     "main.25da0c11.js.map": "/solar-system_app/static/js/main.25da0c11.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d00a5fd.css",
+    "static/css/main.5de44fd0.css",
     "static/js/main.25da0c11.js"
   ]
 }
