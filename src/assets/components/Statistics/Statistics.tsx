@@ -98,18 +98,33 @@ export default function Statistics() {
 
   const selectHandler = () => {
     if (selectIndex) {
-      setData({
-        labels,
-        datasets: [
-          {
-            label: statisticsCategories[Number(selectIndex)],
-            data: planetsStatistics[Number(selectIndex)],
-            pointRadius: 8,
-            borderColor: "rgb(255, 99, 132)",
-            backgroundColor: "rgba(255, 99, 132, 0.5)",
-          },
-        ],
-      });
+      if (selectIndex !== "Choose a comparison option") {
+        setData({
+          labels,
+          datasets: [
+            {
+              label: statisticsCategories[Number(selectIndex)],
+              data: planetsStatistics[Number(selectIndex)],
+              pointRadius: 8,
+              borderColor: "rgb(255, 99, 132)",
+              backgroundColor: "rgba(255, 99, 132, 0.5)",
+            },
+          ],
+        });
+      } else {
+        setData({
+          labels,
+          datasets: [
+            {
+              label: "",
+              data: 0,
+              pointRadius: 0,
+              borderColor: "",
+              backgroundColor: "",
+            },
+          ],
+        });
+      }
     }
   };
 
