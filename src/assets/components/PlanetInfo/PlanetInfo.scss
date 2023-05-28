@@ -32,10 +32,11 @@
   &_name {
     display: flex;
     align-items: flex-end;
-    @include titleFont;
-    font-size: 144px;
-    line-height: 250px;
-    text-transform: none;
+    @include titleFont(
+      $font-size: 144px,
+      $line-height: 250px,
+      $text-transform: none
+    );
 
     @media screen and (min-width: $xxl) {
       justify-content: center;
@@ -47,20 +48,18 @@
     }
 
     @media screen and (min-width: 781px) and (max-width: $m) {
-      font-size: 120px;
+      @include titleFont($font-size: 120px);
     }
 
     @media screen and (min-width: 541px) and (max-width: $s) {
-      font-size: 90px;
+      @include titleFont($font-size: 90px);
     }
 
     @media screen and (max-width: $xs) {
-      font-size: 78px;
-      line-height: 150px;
+      @include titleFont($font-size: 78px, $line-height: 150px);
     }
     @media screen and (max-width: $xxs) {
-      font-size: 56px;
-      line-height: 81px;
+      @include titleFont($font-size: 56px, $line-height: 81px);
     }
   }
 
@@ -83,7 +82,7 @@
         width: 250px;
       }
 
-      @media screen and (min-width: 1$xxs) {
+      @media screen and (min-width: $xxs) {
         width: 500px;
       }
     }

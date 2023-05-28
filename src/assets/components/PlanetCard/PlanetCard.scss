@@ -39,8 +39,7 @@
   }
 
   &_name {
-    @include mainFont;
-    font-size: 14px;
+    @include mainFont($font-size: 14px);
     background-color: transparent;
   }
 }
@@ -49,6 +48,6 @@
   background-color: $main-font-color;
 
   .card__container_name {
-    color: $app-general-background;
+    @include mainFont($font-size: 14px, $color: $app-general-background);
   }
 }

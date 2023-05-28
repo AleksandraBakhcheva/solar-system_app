@@ -12,7 +12,7 @@
     text-align: center;
 
     @media screen and (max-width: $xxs) {
-      font-size: 2rem;
+      @include mainFont($font-size: 2rem);
     }
   }
 
@@ -28,11 +28,11 @@
   button {
     width: 200px;
     height: 45px;
-    @include statBorder;
+    @extend %statBorder;
     @include mainFont;
 
     &:hover {
-      color: $app-general-background;
+      @include mainFont($color: $app-general-background);
       background-color: $main-font-color;
     }
   }

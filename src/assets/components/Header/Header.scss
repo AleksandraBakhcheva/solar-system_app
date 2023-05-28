@@ -39,7 +39,7 @@
       text-decoration: none;
 
       &:hover {
-        color: $app-general-background;
+        @include mainFont($color: $app-general-background);
       }
     }
   }

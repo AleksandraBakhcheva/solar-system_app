@@ -26,13 +26,12 @@
 
     @media screen and (max-width: $xxs) {
       justify-content: center;
-      font-size: 33px;
-      line-height: 48px;
+      @include titleFont($font-size: 33px, $line-height: 48px);
     }
 
     @media screen and (min-width: 481px) and (max-width: $m) {
       justify-content: center;
-      font-size: 60px;
+      @include titleFont($font-size: 60px);
     }
   }
 
@@ -79,17 +78,14 @@
       margin-bottom: -200px;
       margin-left: 40px;
       text-align: center;
-      @include mainFont;
-      font-weight: 600;
-      line-height: 35px;
+      @include mainFont($font-weight: 600, $line-height: 35px);
       z-index: 2;
       background-color: transparent;
 
       @media screen and (max-width: $xxs) {
         margin-bottom: -144px;
         margin-left: -90px;
-        font-size: 16px;
-        line-height: 25px;
+        @include mainFont($font-size: 16px, $line-height: 25px);
       }
 
       @media screen and (min-width: 481px) and (max-width: $l) {
@@ -114,7 +110,7 @@
     button {
       width: 410px;
       height: 65px;
-      @include statBorder;
+      @extend %statBorder;
       @include mainFont;
       cursor: pointer;
       background-color: transparent;
@@ -128,8 +124,7 @@
     select {
       margin-right: 25px;
       padding-left: 20px;
-      font-weight: 600;
-      line-height: 35px;
+      @include mainFont($font-weight: 600, $line-height: 35px);
       outline: none;
       appearance: none;
       background-image: url(../../images/arrow.svg);
@@ -143,25 +138,25 @@
       @media screen and (max-width: $m) {
         margin-right: 0;
         margin-bottom: 2rem;
-        font-size: 15px;
-        line-height: 45px;
+        @include mainFont($font-size: 15px, $line-height: 45px);
         background-position: calc(100% - 15px) center;
       }
     }
 
     button {
-      font-weight: 500;
-      font-size: 36px;
-      line-height: 50px;
+      @include mainFont(
+        $font-weight: 500,
+        $font-size: 36px,
+        $line-height: 50px
+      );
 
       &:hover {
-        color: $app-general-background;
+        @include mainFont($color: $app-general-background);
         background-color: $main-font-color;
       }
 
       @media screen and (max-width: $m) {
-        font-size: 20px;
-        line-height: 50px;
+        @include mainFont($font-size: 20px, $line-height: 50px);
       }
     }
   }
