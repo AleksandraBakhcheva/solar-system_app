@@ -2,8 +2,8 @@ import "./Statistics.scss";
 import { useContext, useState } from "react";
 import { PlanetsContext } from "../../сontexts/PlanetsContext";
 import { statisticsCategories } from "../../utils/StatisticsCategories";
-import thought from "../../images/thought.svg";
-import astronaut from "../../images/astronaut.svg";
+import thought from "../../assets/images/thought.svg";
+import astronaut from "../../assets/images/astronaut.svg";
 import { motion } from "framer-motion";
 import {
   Chart as ChartJS,

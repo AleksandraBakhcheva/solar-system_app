@@ -1,9 +1,9 @@
-import "./assets/styles/General.scss";
+import "./styles/General.scss";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { PlanetsContextProvider } from "./assets/сontexts/PlanetsContext";
-import Error from "./assets/components/Error/Error";
-import Layout from "./assets/components/Layout/Layout";
-import PlanetInfo from "./assets/components/PlanetInfo/PlanetInfo";
+import { PlanetsContextProvider } from "./сontexts/PlanetsContext";
+import Error from "./components/Error/Error";
+import Layout from "./components/Layout/Layout";
+import PlanetInfo from "./components/PlanetInfo/PlanetInfo";
 
 function App() {
   return (

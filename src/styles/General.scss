@@ -8,7 +8,7 @@
 @font-face {
   font-family: "Rock 3D Regular";
   src: local("Rock 3D Regular"),
-    url("../fonts//Rock3D-Regular.woff") format("woff");
+    url("../assets/fonts/Rock3D-Regular.woff") format("woff");
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap");
@@ -18,7 +18,7 @@
   margin: 0;
   padding: 0;
   background-color: $app-general-background;
-  background-image: url(../images/stars.svg);
+  background-image: url(../assets/images/stars.svg);
 
   html,
   body {

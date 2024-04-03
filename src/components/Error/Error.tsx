@@ -1,5 +1,5 @@
 import "./Error.scss";
-import error404 from "../../images/error404.svg";
+import error404 from "../../assets/images/error404.svg";
 import { motion } from "framer-motion";
 
 export default function Error() {

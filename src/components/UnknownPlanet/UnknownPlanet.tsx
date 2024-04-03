@@ -1,5 +1,5 @@
 import "../PlanetInfo/PlanetInfo.scss";
-import planet404 from "../../images/planet404.png";
+import planet404 from "../../assets/images/planet404.png";
 
 export default function UnknownPlanet() {
   return (

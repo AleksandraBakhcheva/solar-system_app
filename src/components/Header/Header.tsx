@@ -1,8 +1,8 @@
 import "./Header.scss";
 import { useState, useEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
-import logo from "../../images/logo.svg";
-import sun from "../../images/sun.svg";
+import logo from "../../assets/images/logo.svg";
+import sun from "../../assets/images/sun.svg";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
 
