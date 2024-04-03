@@ -17,18 +17,23 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: $app-general-background;
-  background-image: url(../assets/images/stars.svg);
 
   html,
   body {
     height: 100%;
   }
 
+  body {
+    max-width: 90rem;
+    margin: 0 auto;
+  }
+
   #root {
     display: flex;
     min-height: 100%;
     flex-direction: column;
+    background-color: $app-general-background;
+    background-image: url(../assets/images/stars.svg);
   }
 
   main {
